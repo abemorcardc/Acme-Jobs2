@@ -1,0 +1,37 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not job any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+employer.job.list.label.reference = Referencia
+employer.job.list.label.title = Título
+employer.job.list.label.deadline = Fecha Límite
+
+employer.job.form.label.title = Título:
+employer.job.form.label.reference = Referencia:
+employer.job.form.label.deadline = Fecha Límite:
+employer.job.form.label.salary = Salario:
+employer.job.form.label.moreInfo = Más información:
+employer.job.form.label.description = Descripción:
+employer.job.form.label.finalMode = Modo final:
+
+employer.job.form.button.create = Crear
+
+employer.job.label.accept = Acepto 
+employer.job.error.must-accept = Debe aceptar 
+
+employer.job.form.button.listAuditRecord = Registros de autoría de este trabajo
+
+employer.job.form.button.Descriptor = Descriptor de este trabajo
+
+
+employer.job.error.deadline-future = La fecha límite debe de ser en un día al menos desde este momento
+
+
+employer.job.form.button.return = Volver
+
