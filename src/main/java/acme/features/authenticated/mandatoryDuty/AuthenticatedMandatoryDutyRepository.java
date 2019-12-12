@@ -15,8 +15,8 @@ public interface AuthenticatedMandatoryDutyRepository extends AbstractRepository
 	@Query("select a from InvestorRecord a")
 	Collection<MandatoryDuty> findManyAll();
 
-	@Query("select m from MandatoryDuty m where m.descriptor.id = ?1")
-	Collection<MandatoryDuty> findManybyDescriptorId(int id);
+	@Query("select m from MandatoryDuty m where m.job.id = ?1")
+	Collection<MandatoryDuty> findManybyJobId(int id);
 
 	@Query("select m from MandatoryDuty m where m.id = ?1")
 	MandatoryDuty findOneById(int id);

@@ -19,7 +19,7 @@ public class AuthenticatedMandatoryDutyController extends AbstractController<Aut
 	//	Internal state ------------
 
 	@Autowired
-	private AuthenticatedMandatoryDutyListService	listService;
+	private AuthenticatedMandatoryDutyListService	list;
 
 	@Autowired
 	private AuthenticatedMandatoryDutyShowService	showService;
@@ -29,7 +29,7 @@ public class AuthenticatedMandatoryDutyController extends AbstractController<Aut
 
 	@PostConstruct
 	private void initalise() {
-		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.LIST, this.list);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 }

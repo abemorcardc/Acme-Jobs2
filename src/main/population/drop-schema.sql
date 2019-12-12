@@ -45,15 +45,11 @@
 
     alter table `job` 
        drop 
-       foreign key `FKfqwyynnbcsq0htxho3vchpd2u`;
-
-    alter table `job` 
-       drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
 
     alter table `mandatory_duty` 
        drop 
-       foreign key `FKbtbut9e8de9qosvtm31cbdll8`;
+       foreign key `FK1hlimp4r545wpojqep3x63adv`;
 
     alter table `provider` 
        drop 
@@ -90,8 +86,6 @@
     drop table if exists `consumer`;
 
     drop table if exists `correa_bulletin`;
-
-    drop table if exists `descriptor`;
 
     drop table if exists `employer`;
 
