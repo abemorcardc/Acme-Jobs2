@@ -49,6 +49,7 @@ public class Offer extends DomainEntity {
 	private Date				deadline;
 
 	@NotBlank
+	@Column(length = 1000)
 	private String				text;
 
 	@NotNull
