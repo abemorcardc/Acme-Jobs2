@@ -1,4 +1,3 @@
-
 package acme.entities.jobs;
 
 import java.util.Date;
@@ -51,7 +50,7 @@ public class Job extends DomainEntity {
 	@URL
 	private String				moreInfo;
 
-	@NotBlank
+	@NotNull
 	private boolean				finalMode;
 
 	@NotBlank

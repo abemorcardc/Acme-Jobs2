@@ -11,7 +11,7 @@
         `version` integer not null,
         `moment` datetime(6),
         `more_info` varchar(255),
-        `text` varchar(255),
+        `text` varchar(1000),
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -40,7 +40,7 @@
     create table `audit_record` (
        `id` integer not null,
         `version` integer not null,
-        `body` varchar(255),
+        `body` varchar(1000),
         `creation_moment` datetime(6),
         `published` bit,
         `title` varchar(255),
@@ -70,7 +70,7 @@
         `version` integer not null,
         `author` varchar(255),
         `moment` datetime(6),
-        `text` varchar(255),
+        `text` varchar(1000),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -78,7 +78,7 @@
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
-        `description` varchar(255),
+        `description` varchar(1000),
         `goal_bronze` varchar(255),
         `goal_gold` varchar(255),
         `goal_silver` varchar(255),
@@ -92,7 +92,7 @@
     create table `company_record` (
        `id` integer not null,
         `version` integer not null,
-        `activities` varchar(255),
+        `activities` varchar(1000),
         `ceo` varchar(255),
         `email` varchar(255),
         `incorporated` bit,
@@ -114,7 +114,7 @@
 
     create table `configuration_spam_words` (
        `configuration_id` integer not null,
-        `spam_words` varchar(255)
+        `spam_words` varchar(1000)
     ) engine=InnoDB;
 
     create table `consumer` (
@@ -131,7 +131,7 @@
         `version` integer not null,
         `author` varchar(255),
         `moment` datetime(6),
-        `text` varchar(255),
+        `text` varchar(1000),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -149,7 +149,7 @@
         `version` integer not null,
         `author` varchar(255),
         `moment` datetime(6),
-        `text` varchar(255),
+        `text` varchar(1000),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -159,7 +159,7 @@
         `name` varchar(255),
         `sector` varchar(255),
         `stars` integer,
-        `statement` varchar(255),
+        `statement` varchar(1000),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -181,7 +181,7 @@
     create table `mandatory_duty` (
        `id` integer not null,
         `version` integer not null,
-        `duty_description` varchar(255),
+        `duty_description` varchar(1000),
         `percentage` integer,
         `title` varchar(255),
         `job_id` integer not null,
@@ -193,7 +193,7 @@
         `version` integer not null,
         `author` varchar(255),
         `moment` datetime(6),
-        `text` varchar(255),
+        `text` varchar(1000),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -206,7 +206,7 @@
         `money_max_currency` varchar(255),
         `money_min_amount` double precision,
         `money_min_currency` varchar(255),
-        `text` varchar(255),
+        `text` varchar(1000),
         `ticker` varchar(255),
         `title` varchar(255),
         primary key (`id`)
@@ -228,7 +228,7 @@
         `moment` datetime(6),
         `money_amount` double precision,
         `money_currency` varchar(255),
-        `text` varchar(255),
+        `text` varchar(1000),
         `ticker` varchar(255),
         `title` varchar(255),
         primary key (`id`)
@@ -239,7 +239,7 @@
         `version` integer not null,
         `author` varchar(255),
         `moment` datetime(6),
-        `text` varchar(255),
+        `text` varchar(1000),
         primary key (`id`)
     ) engine=InnoDB;
 

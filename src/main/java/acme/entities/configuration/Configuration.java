@@ -8,6 +8,7 @@ import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -24,12 +25,12 @@ public class Configuration extends DomainEntity {
 	//atributos
 	@NotBlank
 	private String				title;
-	@NotBlank
+	@NotNull
 	private Double				spamThreshold;
 
 	//@ElementCollection(targetClass = String.class)
 	@ElementCollection(fetch = FetchType.EAGER)
-	@NotBlank
+	@NotNull
 	@Column(length = 1000)
 	private Collection<String>	spamWords;
 
