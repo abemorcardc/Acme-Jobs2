@@ -135,13 +135,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `descriptor` (
-       `id` integer not null,
-        `version` integer not null,
-        `job_description` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
     create table `employer` (
        `id` integer not null,
         `version` integer not null,
@@ -174,14 +167,13 @@
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
-        `description` varchar(255),
+        `descriptor` varchar(255),
         `final_mode` bit not null,
         `more_info` varchar(255),
         `reference` varchar(255),
         `salary_amount` double precision,
         `salary_currency` varchar(255),
         `title` varchar(255),
-        `descriptor_id` integer not null,
         `employer_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -192,7 +184,7 @@
         `duty_description` varchar(255),
         `percentage` integer,
         `title` varchar(255),
-        `descriptor_id` integer not null,
+        `job_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -286,9 +278,6 @@ create index IDX7y4rcwjsl6wvsrlyq38xtq8bu on `company_record` (`name`);
 create index IDX1cpy8kxlsu865sf28r64gus4k on `investor_record` (`name`);
 
     alter table `job` 
-       add constraint UK_qpodqtu8nvqkof3olnqnqcv2l unique (`descriptor_id`);
-
-    alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
 create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
 
@@ -358,19 +347,14 @@ create index IDXn3v48hbbpyaqbons3pqgno06y on `request_` (`date_limit`);
        references `user_account` (`id`);
 
     alter table `job` 
-       add constraint `FKfqwyynnbcsq0htxho3vchpd2u` 
-       foreign key (`descriptor_id`) 
-       references `descriptor` (`id`);
-
-    alter table `job` 
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
        foreign key (`employer_id`) 
        references `employer` (`id`);
 
     alter table `mandatory_duty` 
-       add constraint `FKbtbut9e8de9qosvtm31cbdll8` 
-       foreign key (`descriptor_id`) 
-       references `descriptor` (`id`);
+       add constraint `FK1hlimp4r545wpojqep3x63adv` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 

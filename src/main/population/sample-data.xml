@@ -277,7 +277,7 @@
 	<!-- /////////////////// CONFIGURATION ///////////////////////// -->
 	<bean id="configuration01" class="acme.entities.configuration.Configuration">
 		<property name="title" value="Configuration" />
-		<property name="spamThreshold" value="1.0" />
+		<property name="spamThreshold" value="0.2" />
 		<property name="spamWords">
 			<list>
 				<value>sex</value>
@@ -420,11 +420,10 @@
 		<property name="title" value="Title 1 " />
 		<property name="deadline" value="2021/11/28 10:30" />
 		<property name="salary" value="€ 15,000.00" />
-		<property name="description" value="Description example" />
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer1Employer" />
-		<property name= "descriptor" ref="descriptor01"/>
+		<property name= "descriptor" value="descriptor01"/>
 	</bean>
 
 	<bean name="job2" class="acme.entities.jobs.Job">
@@ -432,11 +431,10 @@
 		<property name="title" value="Title 2 " />
 		<property name="deadline" value="2022/11/28 10:30" />
 		<property name="salary" value="€ 25,000.00" />
-		<property name="description" value="Description example 2" />
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer1Employer" />
-		<property name= "descriptor" ref="descriptor02"/>
+		<property name= "descriptor" value="descriptor02"/>
 	</bean>
 
 	<bean name="job3" class="acme.entities.jobs.Job">
@@ -444,11 +442,10 @@
 		<property name="title" value="Title 3 " />
 		<property name="deadline" value="2019/11/28 10:30" />
 		<property name="salary" value="€ 22,000.00" />
-		<property name="description" value="Description example 3 deadline in past" />
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer1Employer" />
-    	<property name= "descriptor" ref="descriptor03"/>
+    	<property name= "descriptor" value="descriptor03"/>
 	</bean>
 
 	<bean name="job4" class="acme.entities.jobs.Job">
@@ -456,11 +453,10 @@
 		<property name="title" value="Title 4 " />
 		<property name="deadline" value="2021/10/04 11:30" />
 		<property name="salary" value="€ 22,000.00" />
-		<property name="description" value="Description example 4 draft" />
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="finalMode" value="false" />
 		<property name="employer" ref="employer1Employer" />
-		<property name= "descriptor" ref="descriptor04"/>
+		<property name= "descriptor" value="descriptor04"/>
 	</bean>
 
 	<bean name="job5" class="acme.entities.jobs.Job">
@@ -468,11 +464,10 @@
 		<property name="title" value="Title 5 " />
 		<property name="deadline" value="2023/01/01 12:00" />
 		<property name="salary" value="€ 22,000.00" />
-		<property name="description" value="Description example 5 " />
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer2Employer" />
-		<property name= "descriptor" ref="descriptor05"/>
+		<property name= "descriptor" value="descriptor05"/>
 	</bean>
 
 	<!-- /////////////////// APLICATIONS ///////////////////////// -->
@@ -508,26 +503,6 @@
 		<property name="worker" ref="worker2Worker" />
 	</bean>
 
-	<!-- /////////////////// DESCRIPTORS ///////////////////////// -->
-	<bean id="descriptor01" class="acme.entities.descriptors.Descriptor">
-		<property name="jobDescription" value="Descripcion increible" />
-	</bean>
-
-	<bean id="descriptor02" class="acme.entities.descriptors.Descriptor">
-		<property name="jobDescription" value="Otra descripcion increible" />
-	</bean>
-
-	<bean id="descriptor03" class="acme.entities.descriptors.Descriptor">
-		<property name="jobDescription" value="¿Podria ser esta descripcion mas increible?" />
-	</bean>
-	
-	<bean id="descriptor04" class="acme.entities.descriptors.Descriptor">
-		<property name="jobDescription" value="¿Podria ser esta descripcion mas increible?" />
-	</bean>
-	
-	<bean id="descriptor05" class="acme.entities.descriptors.Descriptor">
-		<property name="jobDescription" value="¿Podria ser esta descripcion mas increible?" />
-	</bean>
 
 	<!-- /////////////////// MANDATORY DUTIES ///////////////////////// -->
 
@@ -535,21 +510,42 @@
 		<property name="title" value="Solventar problema impresora" />
 		<property name="dutyDescription" value="Solucionar problema evita funcionamiento de impresora" />
 		<property name="percentage" value="50" />
-		<property name="descriptor" ref="descriptor01" />
+		<property name="job" ref="job1" />
 	</bean>
 
 	<bean id="manDuty02" class="acme.entities.mandatoryDuties.MandatoryDuty">
 		<property name="title" value="Solventar problema CSS web" />
 		<property name="dutyDescription" value="Conseguir mostrar el logo de la empresa en la web corporativa" />
 		<property name="percentage" value="37" />
-		<property name="descriptor" ref="descriptor02" />
+		<property name="job" ref="job1"/>
 	</bean>
 
 	<bean id="manDuty03" class="acme.entities.mandatoryDuties.MandatoryDuty">
 		<property name="title" value="Solventar todos nuestros problemas" />
 		<property name="dutyDescription" value="Literalmente lo que pone en el titulo, mas claro no podria ser." />
 		<property name="percentage" value="100" />
-		<property name="descriptor" ref="descriptor03" />
+		<property name="job" ref="job2"/>
+	</bean>
+	
+	<bean id="manDuty04" class="acme.entities.mandatoryDuties.MandatoryDuty">
+		<property name="title" value="Solventar todos nuestros problemas 2" />
+		<property name="dutyDescription" value="Literalmente lo que pone en el titulo, mas claro no podria ser. 2" />
+		<property name="percentage" value="100" />
+		<property name="job" ref="job3"/>
+	</bean>
+	
+	<bean id="manDuty05" class="acme.entities.mandatoryDuties.MandatoryDuty">
+		<property name="title" value="Solventar todos nuestros problemas 3" />
+		<property name="dutyDescription" value="Literalmente lo que pone en el titulo, mas claro no podria ser. 3" />
+		<property name="percentage" value="100" />
+		<property name="job" ref="job4"/>
+	</bean>
+	
+	<bean id="manDuty06" class="acme.entities.mandatoryDuties.MandatoryDuty">
+		<property name="title" value="Solventar todos nuestros problemas" />
+		<property name="dutyDescription" value="Literalmente lo que pone en el titulo, mas claro no podria ser." />
+		<property name="percentage" value="100" />
+		<property name="job" ref="job5"/>
 	</bean>
 
 	<!-- /////////////////// AUDITORS ///////////////////////// -->
