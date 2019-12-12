@@ -15,6 +15,6 @@
 	<acme:form-return code="employer.job.form.button.return"/>
 	
 	<acme:form-submit code="employer.job.form.button.listAuditRecord" method ="get" action="/authenticated/audit-record/list?id=${id}"/>
-	<acme:form-submit code="employer.job.form.button.mandatoryDuty" method ="get" action="/authenticated/mandatory-duty/listByJob?id=${id}"/>
+	<acme:form-submit code="employer.job.form.button.mandatoryDuty" method ="get" action="/authenticated/mandatory-duty/list?id=${id}"/>
 	</acme:form> 
 

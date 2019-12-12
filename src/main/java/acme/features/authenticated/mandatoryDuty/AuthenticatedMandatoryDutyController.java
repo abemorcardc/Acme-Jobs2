@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.components.CustomCommand;
 import acme.entities.mandatoryDuties.MandatoryDuty;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
@@ -20,7 +19,7 @@ public class AuthenticatedMandatoryDutyController extends AbstractController<Aut
 	//	Internal state ------------
 
 	@Autowired
-	private AuthenticatedMandatoryDutyListByJobService	listByJob;
+	private AuthenticatedMandatoryDutyListService	list;
 
 	@Autowired
 	private AuthenticatedMandatoryDutyShowService	showService;
@@ -30,7 +29,7 @@ public class AuthenticatedMandatoryDutyController extends AbstractController<Aut
 
 	@PostConstruct
 	private void initalise() {
-		super.addCustomCommand(CustomCommand.LIST_BY_JOB, BasicCommand.LIST, this.listByJob);
+		super.addBasicCommand(BasicCommand.LIST, this.list);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 }

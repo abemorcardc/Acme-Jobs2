@@ -13,7 +13,7 @@ import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedMandatoryDutyListByJobService implements AbstractListService<Authenticated, MandatoryDuty> {
+public class AuthenticatedMandatoryDutyListService implements AbstractListService<Authenticated, MandatoryDuty> {
 
 	// Internal State ------------------------------------------------------
 
