@@ -6,7 +6,7 @@
 <acme:form>
 	<acme:form-textbox code="administrator.investor-record.form.label.name" path="name"/>
 	<acme:form-textbox code="administrator.investor-record.form.label.sector" path="sector"/>
-	<acme:form-textbox code="administrator.investor-record.form.label.statement" path="statement"/>
+	<acme:form-textarea code="administrator.investor-record.form.label.statement" path="statement"/>
 	<acme:form-textbox code="administrator.investor-record.form.label.stars" path="stars" />
 	
 	

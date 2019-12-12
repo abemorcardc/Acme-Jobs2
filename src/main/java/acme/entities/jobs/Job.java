@@ -47,11 +47,13 @@ public class Job extends DomainEntity {
 	private Money				salary;
 
 	@NotBlank
+	@Column(length = 1000)
 	private String				description;
 
 	@URL
 	private String				moreInfo;
 
+	@NotBlank
 	private boolean				finalMode;
 	// Relationships ---------------------------------------
 

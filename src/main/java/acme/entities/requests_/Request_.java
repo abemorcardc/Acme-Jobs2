@@ -44,6 +44,7 @@ public class Request_ extends DomainEntity {
 	private Date				dateLimit;
 
 	@NotBlank
+	@Column(length = 1000)
 	private String				text;
 
 	@NotNull

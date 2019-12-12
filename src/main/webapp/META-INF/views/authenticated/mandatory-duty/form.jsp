@@ -5,7 +5,7 @@
 
 <acme:form>
 	<acme:form-textbox code="authenticated.mandatory-duty.form.label.title" path="title"/>
-	<acme:form-textbox code="authenticated.mandatory-duty.form.label.dutyDescription" path="dutyDescription"/>
+	<acme:form-textarea code="authenticated.mandatory-duty.form.label.dutyDescription" path="dutyDescription"/>
 	<acme:form-moment code="authenticated.mandatory-duty.form.label.percentage" path="percentage"/>
 	
 	<acme:form-return code="authenticated.mandatory-duty.form.button.return"/>
