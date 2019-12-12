@@ -53,7 +53,7 @@ public class Job extends DomainEntity {
 	@URL
 	private String				moreInfo;
 
-	@NotBlank
+	@NotNull
 	private boolean				finalMode;
 	// Relationships ---------------------------------------
 
