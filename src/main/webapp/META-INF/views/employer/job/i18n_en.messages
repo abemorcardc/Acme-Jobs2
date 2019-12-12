@@ -17,7 +17,7 @@ employer.job.form.label.title = Title:
 employer.job.form.label.deadline = Deadline:
 employer.job.form.label.salary = Salary:
 employer.job.form.label.moreInfo = More Info:
-employer.job.form.label.description = Description:
+employer.job.form.label.descriptor = Descriptor:
 employer.job.form.label.finalMode = Final mode:
 
 employer.job.label.accept = Accept 
@@ -25,8 +25,7 @@ employer.job.form.button.create = Create
 
 employer.job.form.button.return = Return
 employer.job.form.button.listAuditRecord = Audit Records of this Job
-
-employer.job.form.button.Descriptor = Descriptor of this Job
+employer.job.form.button.mandatoryDuty = Mandatory Duties
 
 employer.job.error.must-accept = Must accept 
 
