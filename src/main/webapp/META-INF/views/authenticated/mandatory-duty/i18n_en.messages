@@ -15,6 +15,10 @@ authenticated.mandatory-duty.form.label.title = Title:
 authenticated.mandatory-duty.form.label.dutyDescription = Description:
 authenticated.mandatory-duty.form.label.percentage = Percentage:
 
+employer.mandatoryDuty.form.button.create = Create
+employer.mandatoryDuty.form.button.update = Update
+employer.mandatoryDuty.form.button.delete = Delete
+
 authenticated.mandatory-duty.form.button.return = Return
 
 

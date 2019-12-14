@@ -110,6 +110,7 @@ master.menu.consumer = Consumidor
 ###### employer################################################################
 master.menu.employer= Empleador
 master.menu.job.listMine = Mostrar mis trabajos
+master.menu.job.create = Crear un trabajo
 master.menu.job.listAll = Mostrar todos los trabajos (solo empleadores)
 
 master.menu.employer.application = Peticiones

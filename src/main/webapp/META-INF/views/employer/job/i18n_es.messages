@@ -26,8 +26,21 @@ employer.job.label.accept = Acepto
 employer.job.error.must-accept = Debe aceptar 
 
 employer.job.form.button.listAuditRecord = Registros de autoría de este trabajo
-employer.job.form.button.mandatoryDuty = Deberes obligatorios
+employer.job.form.button.mandatoryDuty =Mostrar Deberes obligatorios
+employer.mandatoryDuty.form.button.create = Añadir Deber obligatorio
 
+employer.job.form.button.update = Actualizar
+employer.job.form.button.delete = Eliminar
+employer.job.form.button.create = Crear
+
+employer.job.error.mandatoryDuties = No deben de haber deberes obligatorios asociados para poder eliminar el trabajo
+employer.job.error.auditRecords = No deben de haber registros de auditorías asociados para poder eliminar el trabajo
+employer.job.error.applications = No deben de haber aplicaciones de trabajadores asociadas para poder eliminar el trabajo
+
+
+employer.job.error.finalMode = Los trabajos que estén en modo final no se pueden modificar
+employer.job.error.finalMode.workload = Para pasar a modo final sus deberes obligatorios deben sumar una carga de trabajo del 100
+employer.job.error.finalMode.spam = El descriptor no puede ser spam
 
 employer.job.error.deadline-future = La fecha límite debe de ser en un día al menos desde este momento
 
