@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.applications.Application;
+import acme.entities.jobs.Job;
 import acme.entities.roles.Worker;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -64,10 +65,22 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 		//		return result;
 
 		Application result;
+		Job job;
+		int jobId;
+		int workerId;
+		Worker worker;
+
+		jobId = request.getModel().getInteger("idj");
+		job = this.repository.findJobById(jobId);
+
+		workerId = request.getPrincipal().getActiveRoleId();
+		worker = this.repository.findWorkerById(workerId);
 
 		result = new Application();
+		result.setJob(job);
+		result.setWorker(worker);
+		result.setStatus("pending");
 
-		result.setSkills("SKILL INSTANCIADO probando");
 		return result;
 	}
 
@@ -77,8 +90,9 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 		assert entity != null;
 		assert model != null;
 
-		//		String jobReference = this.repository.findJobReferenceById(request.getModel().getInteger("id"));
-		//		model.setAttribute("job", jobReference);
+		int jobId = request.getModel().getInteger("idj");
+		model.setAttribute("idj", jobId);
+
 		request.unbind(entity, model, "reference", "deadline", "status", "statement");
 		request.unbind(entity, model, "skills", "qualifications");
 		request.unbind(entity, model, "job");
