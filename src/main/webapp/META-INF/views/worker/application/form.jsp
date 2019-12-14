@@ -4,7 +4,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="worker.application.form.label.reference" path="reference"/>
+	<acme:form-textbox placeholder="EMP1-JOB1:WOR1" code="worker.application.form.label.reference" path="reference"/>
 	<acme:form-moment code="worker.application.form.label.deadline" path="deadline"/>
 	<acme:form-textbox code="worker.application.form.label.status" path="status"/>
 	<acme:form-textarea code="worker.application.form.label.statement" path="statement"/>

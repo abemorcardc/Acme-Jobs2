@@ -19,6 +19,6 @@ public interface WorkerApplicationRepository extends AbstractRepository {
 	Collection<Application> findManyByWorkerId(int workerId);
 
 	@Query("select a.job.reference from Application a where a.id =?1")
-	String findJobReference(int applicationId);
+	String findJobReferenceById(int jobId);
 
 }

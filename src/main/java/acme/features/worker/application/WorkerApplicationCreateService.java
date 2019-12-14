@@ -66,7 +66,8 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 		Application result;
 
 		result = new Application();
-		//result.setReference("EMP3-JOB5-WORK1");
+
+		result.setSkills("SKILL INSTANCIADO probando");
 		return result;
 	}
 
@@ -76,14 +77,12 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 		assert entity != null;
 		assert model != null;
 
-		//		String jobReference = this.repository.findJobReference(request.getModel().getInteger("id"));
-		//		model.setAttribute("jobReference", jobReference);
-		//		String workerRef = this.repository.findWorkerRef(request.getPrincipal().getAccountId());
-		//		model.setAttribute("workerRef", workerRef);
+		//		String jobReference = this.repository.findJobReferenceById(request.getModel().getInteger("id"));
+		//		model.setAttribute("job", jobReference);
 		request.unbind(entity, model, "reference", "deadline", "status", "statement");
 		request.unbind(entity, model, "skills", "qualifications");
-		//		request.unbind(entity, model, "jobReference");
-		//"workerRef"
+		request.unbind(entity, model, "job");
+		request.unbind(entity, model, "worker");
 	}
 
 	@Override
@@ -115,7 +114,8 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 
 	@Override
 	public void create(final Request<Application> request, final Application entity) {
-
+		assert request != null;
+		assert entity != null;
 		this.repository.save(entity);
 
 	}
