@@ -71,7 +71,7 @@
 		    <acme:menu-separator/>
 		    <acme:menu-suboption code="master.menu.challenge.list" action="/authenticated/challenge/list" />
 			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.job.listAll" action="/authenticated/job/list_mine" />
+			<acme:menu-suboption code="master.menu.job.listAll" action="/authenticated/job/list" />
 
 		
 		</acme:menu-option>
@@ -79,6 +79,7 @@
 		<!---------------------------- EMPLOYER  --------------------------------------->
 		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">			
 		<acme:menu-suboption code="master.menu.job.listMine" action="/employer/job/list_mine" />
+		<acme:menu-suboption code="master.menu.job.create" action="/employer/job/create" />
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.employer.application" access="hasRole('Employer')">			

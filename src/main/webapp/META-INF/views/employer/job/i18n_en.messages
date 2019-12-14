@@ -25,10 +25,21 @@ employer.job.form.button.create = Create
 
 employer.job.form.button.return = Return
 employer.job.form.button.listAuditRecord = Audit Records of this Job
-employer.job.form.button.mandatoryDuty = Mandatory Duties
+employer.job.form.button.mandatoryDuty =List its Mandatory Duties
+employer.mandatoryDuty.form.button.create = Add a Mandatory Duty
+
+employer.job.form.button.update = Update
+employer.job.form.button.delete = Delete
+employer.job.form.button.create = Create
 
 employer.job.error.must-accept = Must accept 
+employer.job.error.mandatoryDuties = There must not be mandatory duties linked to this job in order to delete it
+employer.job.error.auditRecords = There must not be audit records linked to this job in order to delete it
+employer.job.error.applications = There must not be applications by workers linked to this job in order to delete it
 
+employer.job.error.finalMode = Jobs in final mode can not be updated
+employer.job.error.finalMode.workload = Job's mandatory duties' percentage of weekly workload must sum up to 100% to save the job as final mode
+employer.job.error.finalMode.spam = Descriptor must not be spam
 
 employer.job.error.deadline-future = Deadline should be at least 1 day in the future from this moment 
 

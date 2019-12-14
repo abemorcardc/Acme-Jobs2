@@ -25,6 +25,14 @@
 	<definition name="authenticated/mandatory-duty/form" extends="master">		
 		<put-attribute name="body" type="template" value="../authenticated/mandatory-duty/form.jsp" />
 	</definition>
+	
+	<definition name="employer/mandatory-duty/list" extends="master">		
+		<put-attribute name="body" type="template" value="../authenticated/mandatory-duty/list.jsp" />
+	</definition>
+	
+	<definition name="employer/mandatory-duty/form" extends="master">		
+		<put-attribute name="body" type="template" value="../authenticated/mandatory-duty/form.jsp" />
+	</definition>
 
 </tiles-definitions> 
 

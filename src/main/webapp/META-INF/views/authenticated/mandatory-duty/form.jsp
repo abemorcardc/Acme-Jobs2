@@ -6,8 +6,23 @@
 <acme:form>
 	<acme:form-textbox code="authenticated.mandatory-duty.form.label.title" path="title"/>
 	<acme:form-textarea code="authenticated.mandatory-duty.form.label.dutyDescription" path="dutyDescription"/>
-	<acme:form-moment code="authenticated.mandatory-duty.form.label.percentage" path="percentage"/>
+	<acme:form-textbox code="authenticated.mandatory-duty.form.label.percentage" path="percentage"/>
 	
 	<acme:form-return code="authenticated.mandatory-duty.form.button.return"/>
+	
+	<acme:form-submit test="${command == 'show' }" code="employer.mandatoryDuty.form.button.update"
+		action="/employer/mandatory-duty/update" />
+
+	<acme:form-submit test="${command == 'show' }" code="employer.mandatoryDuty.form.button.delete"
+		action="/employer/mandatory-duty/delete" />
+
+	<acme:form-submit test="${command == 'create' }" code="employer.mandatoryDuty.form.button.create"
+		action="/employer/mandatory-duty/create?idj=${idj}" />
+
+	<acme:form-submit test="${command == 'update' }" code="employer.mandatoryDuty.form.button.update"
+		action="/employer/mandatory-duty/update" />
+
+	<acme:form-submit test="${command == 'delete' }" code="employer.mandatoryDuty.form.button.delete"
+		action="/employer/mandatory-duty/delete" />
 	</acme:form> 
 
