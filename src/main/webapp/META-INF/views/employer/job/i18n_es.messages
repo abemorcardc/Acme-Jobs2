@@ -27,7 +27,7 @@ employer.job.error.must-accept = Debe aceptar
 
 employer.job.form.button.listAuditRecord = Registros de autoría de este trabajo
 employer.job.form.button.mandatoryDuty = Deberes obligatorios
-
+employer.job.form.button.apply = Crear aplicación para este trabajo
 
 employer.job.error.deadline-future = La fecha límite debe de ser en un día al menos desde este momento
 

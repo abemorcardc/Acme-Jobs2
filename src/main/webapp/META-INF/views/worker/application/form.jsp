@@ -12,8 +12,12 @@
 	<acme:form-textarea code="worker.application.form.label.qualifications" path="qualifications"/>
     
     <acme:form-textbox code="worker.application.form.label.jobReference" path="jobReference"/>
+ <acme:form-textbox code="worker.application.form.label.workerReference" path="workerReference"/>
 
-
+<acme:form-submit  test="${command == 'create' }"
+	code="worker.application.form.button.create" 
+	action="/worker/application/create"/>
+	
 	<acme:form-return code="worker.application.form.button.return"/>
 	</acme:form> 
 

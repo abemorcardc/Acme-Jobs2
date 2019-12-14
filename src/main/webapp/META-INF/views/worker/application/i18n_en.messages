@@ -12,4 +12,6 @@ worker.application.list.label.deadline = Deadline
 worker.application.list.label.status = Status
 worker.application.form.label.jobReference = Related Job's reference
 
+worker.application.form.label.workerReference = Worker reference
 
+worker.application.form.button.create = Create application

@@ -87,6 +87,7 @@ master.menu.challenges = Retos
 master.menu.challenge.list = Mostrar retos
 
 master.menu.job.listActive = Mostrar trabajos activos
+master.menu.job.listAll = Mostrat todos los trabajos
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
@@ -110,7 +111,7 @@ master.menu.consumer = Consumidor
 ###### employer################################################################
 master.menu.employer= Empleador
 master.menu.job.listMine = Mostrar mis trabajos
-master.menu.job.listAll = Mostrar todos los trabajos (solo empleadores)
+master.menu.job.listAll = Mostrar todos los trabajos 
 
 master.menu.employer.application = Peticiones
 master.menu.application.list = Peticiones a mis trabajos

@@ -26,7 +26,7 @@ employer.job.form.button.create = Create
 employer.job.form.button.return = Return
 employer.job.form.button.listAuditRecord = Audit Records of this Job
 employer.job.form.button.mandatoryDuty = Mandatory Duties
-
+employer.job.form.button.apply= Apply for this job
 employer.job.error.must-accept = Must accept 
 
 
