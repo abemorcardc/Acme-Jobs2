@@ -23,9 +23,8 @@ public class EmployerMandatoryDutyCreateService implements AbstractCreateService
 	public boolean authorise(final Request<MandatoryDuty> request) {
 		assert request != null;
 
-		int mandatoryDutyId = request.getModel().getInteger("id");
-		MandatoryDuty mandatoryDuty = this.repository.findOneById(mandatoryDutyId);
-		Job job = mandatoryDuty.getJob();
+		int jobId = request.getModel().getInteger("idj");
+		Job job = this.repository.findJobById(jobId);
 
 		return job.getEmployer().getId() == request.getPrincipal().getActiveRoleId();
 	}
