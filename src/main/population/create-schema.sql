@@ -27,6 +27,7 @@
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
+        `justification` varchar(1000),
         `qualifications` varchar(1000),
         `reference` varchar(255),
         `skills` varchar(1000),

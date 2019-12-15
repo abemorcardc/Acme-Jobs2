@@ -21,4 +21,7 @@ public interface EmployerApplicationRepository extends AbstractRepository {
 	@Query("select a.job.reference from Application a where a.id =?1")
 	String findJobReference(int applicationId);
 
+	@Query("select a.status from Application a where a.id =?1")
+	String findStatus(int applicationId);
+
 }
