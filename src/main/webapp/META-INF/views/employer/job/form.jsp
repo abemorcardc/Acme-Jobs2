@@ -2,7 +2,7 @@
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
-
+<%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 
 <acme:form>
     
@@ -30,6 +30,10 @@
 	
 	<acme:form-return code="employer.job.form.button.return"/>
 	
+	<security:authorize access="hasRole('Worker')">
+	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.apply" method ="get" action="/worker/application/create?idj=${id}"/>
+	</security:authorize>
+
 	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.listAuditRecord" method ="get" action="/authenticated/audit-record/list?id=${id}"/>
 	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.mandatoryDuty" method ="get" action="/authenticated/mandatory-duty/list?id=${id}"/>
 	<acme:form-submit test="${command != 'create'}" code="employer.mandatoryDuty.form.button.create" method = "get" action="/employer/mandatory-duty/create?idj=${id}" />

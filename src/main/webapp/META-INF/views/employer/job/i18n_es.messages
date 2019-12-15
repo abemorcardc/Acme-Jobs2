@@ -26,6 +26,8 @@ employer.job.label.accept = Acepto
 employer.job.error.must-accept = Debe aceptar 
 
 employer.job.form.button.listAuditRecord = Registros de autoría de este trabajo
+
+employer.job.form.button.apply = Crear aplicación para este trabajo
 employer.job.form.button.mandatoryDuty =Mostrar Deberes obligatorios
 employer.mandatoryDuty.form.button.create = Añadir Deber obligatorio
 
