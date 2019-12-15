@@ -11,6 +11,7 @@
 	<acme:form-textarea code="worker.application.form.label.skills" path="skills"/>
 	<acme:form-textarea code="worker.application.form.label.qualifications" path="qualifications"/>
     
+    <acme:form-textarea code="worker.application.form.label.justification" path="justification"/>
     <acme:form-textbox code="worker.application.form.label.jobReference" path="jobReference"/>
 
 
