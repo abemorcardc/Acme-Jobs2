@@ -1,6 +1,10 @@
 
 package acme.features.worker.application;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,45 +28,12 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 	@Override
 	public boolean authorise(final Request<Application> request) {
 		assert request != null;
-		//		boolean result;
 
-		//		int applicationId;
-		//		Application application;
-		//		Job job;
-		//		Employer employer;
-		//		Principal principal;
-		//
-		//		applicationId = request.getModel().getInteger("id");
-		//		application = this.repository.findOneById(applicationId);
-		//		job = application.getJob();
-		//		employer = job.getEmployer();
-		//		principal = request.getPrincipal();
-		//		result = employer.getUserAccount().getId() == principal.getAccountId();
-
-		//		return result;
 		return true;
 	}
 
 	@Override
 	public Application instantiate(final Request<Application> request) {
-		//
-		//		Application result;
-		//		int jobId;
-		//		String jobReference;
-		//		Worker idWorker;
-		//		Principal principal;
-		//
-		//		jobId = request.getModel().getInteger("id");
-		//		jobReference = this.repository.findJobReference(jobId);
-		//
-		//		principal = request.getPrincipal();
-		//		idWorker = this.repository.findIdWorker(principal.getAccountId());
-		//
-		//		result = new Application();
-		//		result.setReference(jobReference);
-		//		result.setWorker(idWorker);
-		//
-		//		return result;
 
 		Application result;
 		Job job;
@@ -95,8 +66,6 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 
 		request.unbind(entity, model, "reference", "deadline", "status", "statement");
 		request.unbind(entity, model, "skills", "qualifications");
-		request.unbind(entity, model, "job");
-		request.unbind(entity, model, "worker");
 	}
 
 	@Override
@@ -105,7 +74,7 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors); //ejemplo: request.bind(entity, errors, "moment");
+		request.bind(entity, errors);
 	}
 
 	@Override
@@ -114,15 +83,15 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 		assert entity != null;
 		assert errors != null;
 
-		//		Calendar calendar;
-		//		Date minimumDeadline;
-		//
-		//		if (!errors.hasErrors("deadline")) {
-		//			calendar = new GregorianCalendar();
-		//			calendar.add(Calendar.DAY_OF_MONTH, 1);
-		//			minimumDeadline = calendar.getTime();
-		//			errors.state(request, entity.getDeadline().after(minimumDeadline), "deadline", "worker.application.error.deadline-future");
-		//		}
+		Calendar calendar;
+		Date minimumDeadline;
+
+		if (!errors.hasErrors("deadline")) {
+			calendar = new GregorianCalendar();
+			calendar.add(Calendar.DAY_OF_MONTH, 1);
+			minimumDeadline = calendar.getTime();
+			errors.state(request, entity.getDeadline().after(minimumDeadline), "deadline", "worker.application.error.deadline-future");
+		}
 
 	}
 

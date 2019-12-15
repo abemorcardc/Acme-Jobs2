@@ -14,3 +14,5 @@ worker.application.form.label.jobReference = Referencia del trabajo relacionado
 
 worker.application.form.label.workerReference = Referencia del trabajador
 worker.application.form.button.create = Crear aplicación
+
+worker.application.error.deadline-future = La fecha límite debe estar en el futuro
