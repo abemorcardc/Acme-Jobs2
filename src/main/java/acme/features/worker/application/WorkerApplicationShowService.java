@@ -49,7 +49,7 @@ public class WorkerApplicationShowService implements AbstractShowService<Worker,
 		//		String jobReference = this.repository.findJobReference(request.getModel().getInteger("id"));
 		//		model.setAttribute("jobReference", jobReference);
 		request.unbind(entity, model, "reference", "deadline", "status", "statement");
-		request.unbind(entity, model, "skills", "qualifications");
+		request.unbind(entity, model, "skills", "qualifications", "justification");
 
 	}
 
