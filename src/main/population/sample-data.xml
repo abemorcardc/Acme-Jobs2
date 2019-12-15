@@ -460,7 +460,7 @@
 	</bean>
 
 	<bean name="job5" class="acme.entities.jobs.Job">
-		<property name="reference" value="EMP1-JOB5" />
+		<property name="reference" value="EMP2-JOB5" />
 		<property name="title" value="Title 5 " />
 		<property name="deadline" value="2023/01/01 12:00" />
 		<property name="salary" value="€ 22,000.00" />
@@ -475,6 +475,7 @@
 		<property name="reference" value="EMP1-JOB1:AP001" />
 		<property name="deadline" value="2022/11/28 10:30" />
 		<property name="status" value="pending" />
+		<property name="justification" value="No" />
 		<property name="statement" value="statement example" />
 		<property name="skills" value="skills example" />
 		<property name="qualifications" value="qualifications example" />
@@ -486,6 +487,7 @@
 		<property name="reference" value="EMP1-JOB2:AP002" />
 		<property name="deadline" value="2022/05/05 22:30" />
 		<property name="status" value="accepted" />
+		<property name="justification" value="No" />
 		<property name="statement" value="statement example" />
 		<property name="skills" value="skills example" />
 		<property name="qualifications" value="qualifications example" />
@@ -496,6 +498,7 @@
 		<property name="reference" value="EMP1-JOB2:AP003" />
 		<property name="deadline" value="2019/05/05 22:30" />
 		<property name="status" value="rejected" />
+		<property name="justification" value="No cumple el perfil buscado" />
 		<property name="statement" value="statement example" />
 		<property name="skills" value="skills example" />
 		<property name="qualifications" value="qualifications example" />
