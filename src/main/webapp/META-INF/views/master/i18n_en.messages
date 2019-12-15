@@ -85,6 +85,7 @@ master.menu.challenges = Challenges
 master.menu.challenge.list = List Challenges
 
 master.menu.job.listActive = List active jobs
+master.menu.job.listAll = List all jobs
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
@@ -108,8 +109,9 @@ master.menu.consumer = Consumer
 ###### employer################################################################
 master.menu.employer= Employer
 master.menu.job.listMine = List my jobs
+
+master.menu.job.listAll = List all jobs 
 master.menu.job.create = Create a job
-master.menu.job.listAll = List all jobs (only employers)
 
 master.menu.employer.application = Applications
 master.menu.application.list = Me Applications
