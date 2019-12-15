@@ -52,7 +52,7 @@ public class EmployerApplicationShowService implements AbstractShowService<Emplo
 		String jobReference = this.repository.findJobReference(request.getModel().getInteger("id"));
 		model.setAttribute("jobReference", jobReference);
 		request.unbind(entity, model, "reference", "deadline", "status", "statement");
-		request.unbind(entity, model, "skills", "qualifications");
+		request.unbind(entity, model, "skills", "qualifications", "justification");
 
 	}
 
