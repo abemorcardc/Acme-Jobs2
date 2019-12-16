@@ -1,4 +1,5 @@
 employer.application.form.label.reference = Reference
+employer.application.form.label.creationMoment = Creation Moment
 employer.application.form.label.deadline = Deadline
 employer.application.form.label.status = Status
 employer.application.form.label.justification = Justification
