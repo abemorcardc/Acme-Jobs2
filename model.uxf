@@ -649,6 +649,7 @@ Auditor
     </coordinates>
     <panel_attributes>Application
 --
++creationMoment Date {NotNull,Temporal{TIMESTAMP}}
 +reference: String {Unique,NotBlank,Length(min = 5, max = 15)}
 +deadline: Date {NotNull,Temporal{TIMESTAMP}}
 +status: String {NotBlank}

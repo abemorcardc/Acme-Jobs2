@@ -35,6 +35,10 @@ employer.job.form.button.update = Actualizar
 employer.job.form.button.delete = Eliminar
 employer.job.form.button.create = Crear
 
+employer.job.form.button.list.application.byReference = Listar Peticiones por Referencia
+employer.job.form.button.list.application.byStatus = Listar Peticiones por Estado
+employer.job.form.button.list.application.byCreation = Listar Peticiones por Momento de Creación
+
 employer.job.error.mandatoryDuties = No deben de haber deberes obligatorios asociados para poder eliminar el trabajo
 employer.job.error.auditRecords = No deben de haber registros de auditorías asociados para poder eliminar el trabajo
 employer.job.error.applications = No deben de haber aplicaciones de trabajadores asociadas para poder eliminar el trabajo
