@@ -472,6 +472,7 @@
 
 	<!-- /////////////////// APLICATIONS ///////////////////////// -->
 	<bean name="application1" class="acme.entities.applications.Application">
+		<property name="creationMoment" value="2021/09/28 11:30" />
 		<property name="reference" value="EMP1-JOB1:AP001" />
 		<property name="deadline" value="2022/11/28 10:30" />
 		<property name="status" value="pending" />
@@ -484,6 +485,7 @@
 	</bean>
 
 	<bean name="application2" class="acme.entities.applications.Application">
+		<property name="creationMoment" value="2022/03/14 11:10" />
 		<property name="reference" value="EMP1-JOB2:AP002" />
 		<property name="deadline" value="2022/05/05 22:30" />
 		<property name="status" value="accepted" />
@@ -494,7 +496,9 @@
 		<property name="job" ref="job2" />
 		<property name="worker" ref="worker1Worker" />
 	</bean>
+	
 		<bean name="application3" class="acme.entities.applications.Application">
+		<property name="creationMoment" value="2022/11/20 09:30" />
 		<property name="reference" value="EMP1-JOB2:AP003" />
 		<property name="deadline" value="2019/05/05 22:30" />
 		<property name="status" value="rejected" />

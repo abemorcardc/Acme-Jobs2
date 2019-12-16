@@ -99,6 +99,12 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 	public void create(final Request<Application> request, final Application entity) {
 		assert request != null;
 		assert entity != null;
+
+		Date moment;
+
+		moment = new Date(System.currentTimeMillis() - 1);
+		entity.setCreationMoment(moment);
+
 		this.repository.save(entity);
 
 	}
