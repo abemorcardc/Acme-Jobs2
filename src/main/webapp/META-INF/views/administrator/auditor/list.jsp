@@ -16,9 +16,8 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
- <acme:list-column code="employer.application.list.label.reference" path="reference" width="30%"/>
-  <acme:list-column code="employer.application.list.label.creationMoment" path="deadline" width="15%"/>
- <acme:list-column code="employer.application.list.label.deadline" path="deadline" width="15%"/>
- <acme:list-column code="employer.application.list.label.status" path="status" width="30%"/>
+ <acme:list-column code="administrator.auditor.list.label.firm" path="firm" width="50%"/>
+ <acme:list-column code="administrator.auditor.list.label.accepted" path="accepted" width="50%"/>
+
 </acme:list>
 

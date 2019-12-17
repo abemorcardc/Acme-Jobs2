@@ -26,6 +26,7 @@
     create table `application` (
        `id` integer not null,
         `version` integer not null,
+        `creation_moment` datetime(6),
         `deadline` datetime(6),
         `justification` varchar(1000),
         `qualifications` varchar(1000),
@@ -54,6 +55,7 @@
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
+        `accepted` varchar(255),
         `firm` varchar(255),
         `responsability_statement` varchar(255),
         primary key (`id`)
@@ -300,6 +302,9 @@
 
     insert into `hibernate_sequence` values ( 1 );
 create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
+create index IDXdwumdwpjcwdk1mef9ua69yc2p on `application` (`reference`);
+create index IDX2q2747fhp099wkn3j2yt05fhs on `application` (`status`);
+create index IDX618is0hf6jk8mhi0qeume2hqw on `application` (`creation_moment`);
 
     alter table `application` 
        add constraint UK_ct7r18vvxl5g4c4k7aefpa4do unique (`reference`);

@@ -27,12 +27,17 @@ employer.job.form.button.return = Return
 employer.job.form.button.listAuditRecord = Audit Records of this Job
 
 employer.job.form.button.apply= Apply for this job
+employer.job.form.button.createAuditRecord = Create Audit Record for this Job
 employer.job.form.button.mandatoryDuty = List its Mandatory Duties
 employer.mandatoryDuty.form.button.create = Add a Mandatory Duty
 
 employer.job.form.button.update = Update
 employer.job.form.button.delete = Delete
 employer.job.form.button.create = Create
+
+employer.job.form.button.list.application.byReference = List Applications by Reference
+employer.job.form.button.list.application.byStatus = List Applications by Status
+employer.job.form.button.list.application.byCreation = List Applications by Creation Moment
 
 employer.job.error.must-accept = Must accept 
 employer.job.error.mandatoryDuties = There must not be mandatory duties linked to this job in order to delete it
