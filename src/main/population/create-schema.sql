@@ -55,6 +55,7 @@
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
+        `accepted` varchar(255),
         `firm` varchar(255),
         `responsability_statement` varchar(255),
         primary key (`id`)

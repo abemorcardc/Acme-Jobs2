@@ -31,13 +31,15 @@ public class AuditorJobShowService implements AbstractShowService<Auditor, Job> 
 		Job job;
 		Employer employer;
 		Principal principal;
+		
+		int userId = request.getPrincipal().getActiveRoleId();
+		String accepted = this.repository.findAccepted(userId);
 
 		jobId = request.getModel().getInteger("id");
 		job = this.repository.findOneById(jobId);
 		employer = job.getEmployer();
 		principal = request.getPrincipal();
-		result = job.isFinalMode() || !job.isFinalMode() && employer.getUserAccount().getId() == principal.getActiveRoleId(); //no se si esta bien 
-
+		result = job.isFinalMode() || !job.isFinalMode() && employer.getUserAccount().getId() == principal.getActiveRoleId() && accepted.equals("true");
 		return result;
 	}
 
