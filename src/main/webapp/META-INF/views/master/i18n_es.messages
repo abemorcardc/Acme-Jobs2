@@ -94,6 +94,9 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 
+master.menu.administrator.auditor = Lista de Auditores
+master.menu.auditor.list = Lista de Auditores
+
 master.menu.configurations = Configuración
 master.menu.configuration.list = Configuraciones
 

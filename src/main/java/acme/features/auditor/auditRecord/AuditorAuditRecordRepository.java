@@ -17,4 +17,7 @@ public interface AuditorAuditRecordRepository extends AbstractRepository {
 
 	@Query("select ar from AuditRecord ar where ar.auditor.id =?1")
 	Collection<AuditRecord> findManyByAuditorId(int auditorId);
+
+	@Query("select a.accepted from Auditor a where a.id =?1")
+	String findAccepted(int id);
 }

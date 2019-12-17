@@ -9,7 +9,6 @@ import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
@@ -48,15 +47,8 @@ public class AdministratorAuditorUpdateService implements AbstractUpdateService<
 	public Auditor findOne(final Request<Auditor> request) {
 		assert request != null;
 
-		Auditor result;
-		Principal principal;
-		int userAccountId;
-
-		principal = request.getPrincipal();
-		userAccountId = principal.getAccountId();
-
-		result = this.repository.findOneAuditorByUserAccountId(userAccountId);
-
+		int auditorId = request.getModel().getInteger("id");
+		Auditor result = this.repository.findOneAuditorById(auditorId);
 		return result;
 	}
 
@@ -66,16 +58,18 @@ public class AdministratorAuditorUpdateService implements AbstractUpdateService<
 		assert entity != null;
 		assert errors != null;
 
-		Boolean accepted = request.getModel().getBoolean("accepted");
+		String accepted = request.getModel().getString("accepted");
 
-		Boolean r1 = accepted == true || accepted == false;
-		errors.state(request, r1, "status", "administrator.auditor.error.accepted");
+		Boolean r1 = accepted.equals("true") || accepted.equals("false");
+		errors.state(request, r1, "accepted", "administrator.auditor.error.accepted");
 
 	}
 
 	@Override
 	public void update(final Request<Auditor> request, final Auditor entity) {
-		// TODO Auto-generated method stub
+		assert request != null;
+		assert entity != null;
 
+		this.repository.save(entity);
 	}
 }

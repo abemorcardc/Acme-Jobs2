@@ -31,12 +31,14 @@ public class AuditorAuditRecordShowService implements AbstractShowService<Audito
 		Auditor auditor;
 		Principal principal;
 
+		int userId = request.getPrincipal().getActiveRoleId();
+		String accepted = this.repository.findAccepted(userId);
+
 		auditorRecordId = request.getModel().getInteger("id");
 		auditorRecord = this.repository.findOneById(auditorRecordId);
 		auditor = auditorRecord.getAuditor();
 		principal = request.getPrincipal();
-		result = auditor.getUserAccount().getId() == principal.getAccountId();
-
+		result = auditor.getUserAccount().getId() == principal.getAccountId() && accepted.equals("true");
 		return result;
 	}
 

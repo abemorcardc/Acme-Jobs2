@@ -20,4 +20,4 @@ authenticated.auditor.form.button.update = Actualizar
 authenticated.auditor.form.button.return = Volver
 
 
-authenticated.auditor.form.label.alert = El administrador debe aceptar tu petición para que seas auditor.
+authenticated.auditor.form.label.alert = El administrador podría aceptar o rechazar su petición.

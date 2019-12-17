@@ -19,4 +19,4 @@ authenticated.auditor.form.button.create = Register
 authenticated.auditor.form.button.update = Update
 authenticated.auditor.form.button.return = Return
 
-authenticated.auditor.form.label.alert = An administrator of the system must accept before.
+authenticated.auditor.form.label.alert = The administrator could accept or reject your request.
