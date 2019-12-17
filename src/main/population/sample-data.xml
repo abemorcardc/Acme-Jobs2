@@ -472,10 +472,11 @@
 
 	<!-- /////////////////// APLICATIONS ///////////////////////// -->
 	<bean name="application1" class="acme.entities.applications.Application">
-		<property name="reference" value="EMP1-JOB1:AP001" />
+		<property name="creationMoment" value="2021/09/28 11:30" />
+		<property name="reference" value="EMP1-JOB1:AP01" />
 		<property name="deadline" value="2022/11/28 10:30" />
 		<property name="status" value="pending" />
-		<property name="justification" value="No" />
+		<property name="justification" value="" />
 		<property name="statement" value="statement example" />
 		<property name="skills" value="skills example" />
 		<property name="qualifications" value="qualifications example" />
@@ -484,18 +485,21 @@
 	</bean>
 
 	<bean name="application2" class="acme.entities.applications.Application">
-		<property name="reference" value="EMP1-JOB2:AP002" />
+		<property name="creationMoment" value="2022/03/14 11:10" />
+		<property name="reference" value="EMP1-JOB2:AP02" />
 		<property name="deadline" value="2022/05/05 22:30" />
 		<property name="status" value="accepted" />
-		<property name="justification" value="No" />
+		<property name="justification" value="" />
 		<property name="statement" value="statement example" />
 		<property name="skills" value="skills example" />
 		<property name="qualifications" value="qualifications example" />
 		<property name="job" ref="job2" />
 		<property name="worker" ref="worker1Worker" />
 	</bean>
+	
 		<bean name="application3" class="acme.entities.applications.Application">
-		<property name="reference" value="EMP1-JOB2:AP003" />
+		<property name="creationMoment" value="2022/11/20 09:30" />
+		<property name="reference" value="EMP1-JOB2:AP03" />
 		<property name="deadline" value="2019/05/05 22:30" />
 		<property name="status" value="rejected" />
 		<property name="justification" value="No cumple el perfil buscado" />
@@ -503,6 +507,19 @@
 		<property name="skills" value="skills example" />
 		<property name="qualifications" value="qualifications example" />
 		<property name="job" ref="job3" />
+		<property name="worker" ref="worker2Worker" />
+	</bean>
+	
+	<bean name="application4" class="acme.entities.applications.Application">
+		<property name="creationMoment" value="2022/11/20 09:35" />
+		<property name="reference" value="EMP1-JOB2:AP04" />
+		<property name="deadline" value="2019/05/05 22:35" />
+		<property name="status" value="rejected" />
+		<property name="justification" value="No cumple el perfil buscado" />
+		<property name="statement" value="statement example" />
+		<property name="skills" value="skills example" />
+		<property name="qualifications" value="qualifications example" />
+		<property name="job" ref="job1" />
 		<property name="worker" ref="worker2Worker" />
 	</bean>
 

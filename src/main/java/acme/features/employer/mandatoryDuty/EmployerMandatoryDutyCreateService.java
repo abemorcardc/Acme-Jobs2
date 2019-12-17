@@ -26,7 +26,7 @@ public class EmployerMandatoryDutyCreateService implements AbstractCreateService
 		int jobId = request.getModel().getInteger("idj");
 		Job job = this.repository.findJobById(jobId);
 
-		return job.getEmployer().getId() == request.getPrincipal().getActiveRoleId();
+		return job.getEmployer().getId() == request.getPrincipal().getActiveRoleId() && job.isFinalMode() == false;
 	}
 
 	@Override

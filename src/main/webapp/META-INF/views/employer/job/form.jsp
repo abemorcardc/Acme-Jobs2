@@ -33,10 +33,16 @@
 	<security:authorize access="hasRole('Worker')">
 	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.apply" method ="get" action="/worker/application/create?idj=${id}"/>
 	</security:authorize>
+	
+	<security:authorize access="hasRole('Auditor')">
+	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.createAuditRecord" method ="get" action="/auditor/audit-record/create?idj=${id}"/>
+	</security:authorize>
 
 	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.listAuditRecord" method ="get" action="/authenticated/audit-record/list?id=${id}"/>
 	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.mandatoryDuty" method ="get" action="/authenticated/mandatory-duty/list?id=${id}"/>
-	<acme:form-submit test="${command != 'create'}" code="employer.mandatoryDuty.form.button.create" method = "get" action="/employer/mandatory-duty/create?idj=${id}" />
+	
+	<security:authorize access="hasRole('Employer')">
+	<acme:form-submit test="${command != 'create' && finalMode == false}" code="employer.mandatoryDuty.form.button.create" method = "get" action="/employer/mandatory-duty/create?idj=${id}" />
 	
 	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.update"
 		action="/employer/job/update" />
@@ -52,6 +58,19 @@
 
 	<acme:form-submit test="${command == 'delete' }" code="employer.job.form.button.delete"
 		action="/employer/job/delete" />
+		
+	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.list.application.byReference" method ="get" 
+		action="/employer/application/list_by_reference?id=${id}" />
+		
+	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.list.application.byStatus" method ="get"
+		action="/employer/application/list_by_status?id=${id}" />
+		
+	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.list.application.byCreation" method ="get"
+		action="/employer/application/list_by_creation?id=${id}" />
+		
+	</security:authorize>
+	
+	
 	
 	</acme:form> 
 

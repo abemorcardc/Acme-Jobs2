@@ -11,8 +11,8 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
-import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.entities.roles.Employer;
@@ -28,9 +28,9 @@ public class Job extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
-	@Column(unique = true)
 	@NotBlank
-	@Length(min = 5, max = 10)
+	@Column(unique = true)
+	@Pattern(regexp = "^\\w{4}\\-\\w{4}$")
 	private String				reference;
 
 	@NotBlank

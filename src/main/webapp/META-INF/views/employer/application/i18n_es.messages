@@ -1,4 +1,5 @@
 employer.application.form.label.reference = Referencia
+employer.application.form.label.creationMoment = Momento de Creación
 employer.application.form.label.deadline = Fecha Limite
 employer.application.form.label.status = Estado
 employer.application.form.label.justification = Justificación
@@ -12,6 +13,7 @@ employer.application.form.button.update = Actualizar
 
 employer.application.list.label.reference = Referencia
 employer.application.list.label.deadline = Fecha Limite
+employer.application.list.label.creationMoment = Fecha de creacion
 employer.application.list.label.status = Estado
 
 employer.application.error.status = El estado debe ser: aceptado o rechazado

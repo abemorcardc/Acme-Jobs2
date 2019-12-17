@@ -5,6 +5,7 @@
 
 <acme:form>
 	<acme:form-textbox readonly="true" code="employer.application.form.label.reference" path="reference"/>
+	<acme:form-moment readonly="true" code="employer.application.form.label.creationMoment" path="creationMoment"/>
 	<acme:form-moment readonly="true" code="employer.application.form.label.deadline" path="deadline"/>
 	<acme:form-textbox code="employer.application.form.label.status" path="status"/>
 	<acme:form-textarea code="employer.application.form.label.justification" path="justification"/>
