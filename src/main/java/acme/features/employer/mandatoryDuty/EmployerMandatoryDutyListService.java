@@ -33,7 +33,7 @@ public class EmployerMandatoryDutyListService implements AbstractListService<Emp
 		assert entity != null;
 		assert model != null;
 
-		int jobId = request.getModel().getInteger("id");
+		int jobId = request.getModel().getInteger("idj");
 		model.setAttribute("idj", jobId);
 		request.unbind(entity, model, "title", "dutyDescription", "percentage");
 
@@ -44,7 +44,7 @@ public class EmployerMandatoryDutyListService implements AbstractListService<Emp
 		assert request != null;
 
 		Collection<MandatoryDuty> result;
-		result = this.repository.findManybyJobId(request.getModel().getInteger("id"));
+		result = this.repository.findManybyJobId(request.getModel().getInteger("idj"));
 
 		return result;
 	}

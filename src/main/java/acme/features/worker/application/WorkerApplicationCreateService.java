@@ -65,9 +65,9 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 		assert model != null;
 
 		int jobId = request.getModel().getInteger("idj");
-		String jobRef = this.repository.findJobReference(jobId);
+		String jobReference = this.repository.findJobReference(jobId);
 		model.setAttribute("idj", jobId);
-		model.setAttribute("jobRef", jobRef);
+		model.setAttribute("jobReference", jobReference);
 
 		request.unbind(entity, model, "reference", "deadline", "status", "statement");
 		request.unbind(entity, model, "skills", "qualifications");

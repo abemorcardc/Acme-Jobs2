@@ -8,12 +8,13 @@
 # purposes.  The copyright owner does not job any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.mandatory-duty.form.label.title = Título
-authenticated.mandatory-duty.form.label.percentage = Porcentaje
+authenticated.mandatory-duty.list.label.title = Título
+authenticated.mandatory-duty.list.label.percentage = Porcentaje
 
 authenticated.mandatory-duty.form.label.title = Título:
 authenticated.mandatory-duty.form.label.dutyDescription = Descripción:
 authenticated.mandatory-duty.form.label.percentage = Porcentaje:
+authenticated.mandatory-duty.form.label.jobReference = Referencia del trabajo:
 
 employer.mandatoryDuty.form.button.create = Crear
 employer.mandatoryDuty.form.button.update = Actualizar

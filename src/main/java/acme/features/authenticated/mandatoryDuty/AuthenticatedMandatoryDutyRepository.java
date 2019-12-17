@@ -21,4 +21,7 @@ public interface AuthenticatedMandatoryDutyRepository extends AbstractRepository
 	@Query("select m from MandatoryDuty m where m.id = ?1")
 	MandatoryDuty findOneById(int id);
 
+	@Query("select md.job.reference from MandatoryDuty md where md.id =?1")
+	String findJobReference(int mandatoryId);
+
 }

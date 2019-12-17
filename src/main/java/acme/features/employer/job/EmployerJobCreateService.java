@@ -69,6 +69,10 @@ public class EmployerJobCreateService implements AbstractCreateService<Employer,
 		assert entity != null;
 		assert errors != null;
 
+		Boolean finalMode = request.getModel().getBoolean("finalMode");
+		Boolean r = finalMode == false;
+
+		errors.state(request, r, "finalMode", "employer.job.error.finalMode.create");
 	}
 
 	@Override

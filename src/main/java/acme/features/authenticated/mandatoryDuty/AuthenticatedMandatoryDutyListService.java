@@ -42,7 +42,7 @@ public class AuthenticatedMandatoryDutyListService implements AbstractListServic
 		assert request != null;
 
 		Collection<MandatoryDuty> result;
-		result = this.repository.findManybyJobId(request.getModel().getInteger("id"));
+		result = this.repository.findManybyJobId(request.getModel().getInteger("idj"));
 
 		return result;
 	}

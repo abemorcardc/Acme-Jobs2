@@ -16,7 +16,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-<acme:list-column code="authenticated.mandatory-duty.form.label.title" path="title" width="80%"/>
-<acme:list-column code="authenticated.mandatory-duty.form.label.percentage" path="percentage" width="20%"/>
+<acme:list-column code="authenticated.mandatory-duty.list.label.title" path="title" width="80%"/>
+<acme:list-column code="authenticated.mandatory-duty.list.label.percentage" path="percentage" width="20%"/>
 </acme:list>
-<acme:form-return code="authenticated.mandatory-duty.form.button.return"/>
+<acme:form-return code="authenticated.mandatory-duty.list.button.return"/>

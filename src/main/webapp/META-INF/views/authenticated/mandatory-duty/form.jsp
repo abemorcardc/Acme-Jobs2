@@ -4,6 +4,8 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
+
+	<acme:form-textbox readonly="true" code="authenticated.mandatory-duty.form.label.jobReference" path="jobReference"/>
 	<acme:form-textbox code="authenticated.mandatory-duty.form.label.title" path="title"/>
 	<acme:form-textarea code="authenticated.mandatory-duty.form.label.dutyDescription" path="dutyDescription"/>
 	<acme:form-textbox code="authenticated.mandatory-duty.form.label.percentage" path="percentage"/>

@@ -4,6 +4,9 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
+	
+	<acme:form-textbox readonly="true" code="auditor.audit-record.form.label.jobReference" path="jobReference"/>
+
 	<acme:form-textbox code="auditor.audit-record.form.label.title" path="title"/>
 	<jstl:if test="${command != 'create'}">
 		<acme:form-moment code="auditor.audit-record.form.label.creationMoment" path="creationMoment" readonly="true" />

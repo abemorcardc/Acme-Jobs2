@@ -16,6 +16,7 @@ auditor.audit-record.form.label.title = Title:
 auditor.audit-record.form.label.creationMoment = Creation Moment:
 auditor.audit-record.form.label.body = Body:
 auditor.audit-record.form.label.published = Published:
+auditor.audit-record.form.label.jobReference = Job Reference:
 
 
 auditor.audit-record.form.button.return = Return
