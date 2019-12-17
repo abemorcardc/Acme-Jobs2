@@ -164,6 +164,11 @@
 			<acme:menu-suboption code="master.menu.user-account.worker" action="/authenticated/worker/update"
 				access="hasRole('Worker')" />
 				
+				<acme:menu-suboption code="master.menu.user-account.become-auditor" action="/authenticated/auditor/create"
+				access="!hasRole('Auditor')" />
+			<acme:menu-suboption code="master.menu.user-account.auditor" action="/authenticated/auditors/update"
+				access="hasRole('Auditor')" />
+				
 			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create"
 				access="!hasRole('Consumer')" />
 			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update"
