@@ -31,6 +31,14 @@
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
 
+    alter table `authenticated_message_thread` 
+       drop 
+       foreign key `FKt8r6monb8mr4j7lt956c4mn9n`;
+
+    alter table `authenticated_message_thread` 
+       drop 
+       foreign key `FKhwg236pcsp6wtya372osd10qy`;
+
     alter table `configuration_spam_words` 
        drop 
        foreign key `FK5lk29cpqe3960a943x8x8j4yh`;
@@ -50,6 +58,18 @@
     alter table `mandatory_duty` 
        drop 
        foreign key `FK1hlimp4r545wpojqep3x63adv`;
+
+    alter table `message` 
+       drop 
+       foreign key `FKe1edpykjs39o98sfkjafa0dtn`;
+
+    alter table `message` 
+       drop 
+       foreign key `FKn5adlx3oqjna7aupm8gwg3fuj`;
+
+    alter table `message_thread` 
+       drop 
+       foreign key `FK3fa4h4tfet2kocvatib2ovhsa`;
 
     alter table `provider` 
        drop 
@@ -72,6 +92,8 @@
     drop table if exists `auditor`;
 
     drop table if exists `authenticated`;
+
+    drop table if exists `authenticated_message_thread`;
 
     drop table if exists `caballero_bulletin`;
 
@@ -96,6 +118,10 @@
     drop table if exists `job`;
 
     drop table if exists `mandatory_duty`;
+
+    drop table if exists `message`;
+
+    drop table if exists `message_thread`;
 
     drop table if exists `morante_bulletin`;
 

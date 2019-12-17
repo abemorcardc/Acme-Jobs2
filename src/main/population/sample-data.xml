@@ -661,6 +661,76 @@
 		<property name="job" ref="job5" />
 
 	</bean>
+	
+	<!-- MessageThread -->
+	
+	
+	<bean name="MessageThread1" class="acme.entities.messageThreads.MessageThread">
+		<property name="title" value="Message Thread 1 " />
+		<property name="creationMoment" value="2019/11/28 10:30" />
+		<property name="creator" ref="employer1Authenticated"/>		
+	</bean>
+
+
+	<bean name="MessageThread2" class="acme.entities.messageThreads.MessageThread">
+		<property name="title" value="Message Thread 2" />
+		<property name="creationMoment" value="2021/12/03 11:00" />
+		<property name="creator" ref="auditor1Authenticated"/>
+	</bean>
+	
+	
+	<!-- Authenticated_MessageThread -->
+	
+	<bean name="Authenticated_MessageThread1" class="acme.entities.authenticated_MessageThreads.Authenticated_MessageThread">
+		<property name="authenticated" ref="employer1Authenticated"/>
+	    <property name="messageThread" ref="MessageThread1"/>
+	</bean>
+	
+	<bean name="Authenticated_MessageThread2" class="acme.entities.authenticated_MessageThreads.Authenticated_MessageThread">
+		<property name="authenticated" ref="worker1Authenticated"/>
+	    <property name="messageThread" ref="MessageThread1"/>
+	</bean>
+	
+	<bean name="Authenticated_MessageThread3" class="acme.entities.authenticated_MessageThreads.Authenticated_MessageThread">
+		<property name="authenticated" ref="auditor1Authenticated"/>
+	    <property name="messageThread" ref="MessageThread2"/>
+	</bean>
+	
+	
+
+       <!-- Message -->
+
+	<bean name="Message1" class="acme.entities.messages.Message">
+		<property name="title" value="Message 1 " />
+		<property name="creationMoment" value="2021/11/28 11:30" />
+		<property name="tags" value="primero,importante"/>
+		<property name="body" value="Hola, ¿qué tal?"/>
+		<property name ="author" ref ="worker1Authenticated"/>
+		<property name ="messageThread" ref ="MessageThread1"/>
+		
+	</bean>
+	
+	<bean name="Message2" class="acme.entities.messages.Message">
+		<property name="title" value="Message 2 " />
+		<property name="creationMoment" value="2021/11/28 12:30" />
+		<property name="tags" value="importante"/>
+		<property name="body" value="¡Muy bien!"/>
+		<property name ="author" ref ="employer1Authenticated"/>
+		<property name ="messageThread" ref ="MessageThread1"/>
+		
+	</bean>
+	
+	<bean name="Message3" class="acme.entities.messages.Message">
+		<property name="title" value="Message 3" />
+		<property name="creationMoment" value="2021/12/03 12:00" />
+		<property name="tags" value="primero,importante"/>
+		<property name="body" value="Vaya, no hay nadie más..."/>
+		<property name ="author" ref ="auditor1Authenticated"/>
+		<property name ="messageThread" ref ="MessageThread2"/>
+		
+	</bean>
+	
+
 
 
 	<!-- /////////////////// FIN ///////////////////////// -->

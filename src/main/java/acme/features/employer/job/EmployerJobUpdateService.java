@@ -97,7 +97,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		String[] palabrasDescriptor = descriptor.split(" ");
 		Double contadorSpam = 0.0;
 		for (String s : palabrasDescriptor) {
-			if (spamWords.contains(s)) {
+			if (spamWords.contains(s.trim())) {
 				contadorSpam = contadorSpam + 1;
 			}
 		}
