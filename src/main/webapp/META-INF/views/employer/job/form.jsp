@@ -33,6 +33,10 @@
 	<security:authorize access="hasRole('Worker')">
 	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.apply" method ="get" action="/worker/application/create?idj=${id}"/>
 	</security:authorize>
+	
+	<security:authorize access="hasRole('Auditor')">
+	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.createAuditRecord" method ="get" action="/auditor/audit-record/create?idj=${id}"/>
+	</security:authorize>
 
 	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.listAuditRecord" method ="get" action="/authenticated/audit-record/list?id=${id}"/>
 	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.mandatoryDuty" method ="get" action="/authenticated/mandatory-duty/list?id=${id}"/>

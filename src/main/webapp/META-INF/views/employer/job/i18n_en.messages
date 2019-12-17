@@ -27,6 +27,7 @@ employer.job.form.button.return = Return
 employer.job.form.button.listAuditRecord = Audit Records of this Job
 
 employer.job.form.button.apply= Apply for this job
+employer.job.form.button.createAuditRecord = Create Audit Record for this Job
 employer.job.form.button.mandatoryDuty = List its Mandatory Duties
 employer.mandatoryDuty.form.button.create = Add a Mandatory Duty
 
