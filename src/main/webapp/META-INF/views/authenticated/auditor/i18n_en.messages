@@ -13,6 +13,7 @@ authenticated.auditor.form.title.update = Update your auditor data
 
 authenticated.auditor.form.label.firm = Firm
 authenticated.auditor.form.label.statement = Responsability statement
+authenticated.auditor.form.label.accepted = Accepted
 
 authenticated.auditor.form.button.create = Register
 authenticated.auditor.form.button.update = Update

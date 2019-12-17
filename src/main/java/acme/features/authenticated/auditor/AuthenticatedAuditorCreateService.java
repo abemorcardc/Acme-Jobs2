@@ -71,7 +71,7 @@ public class AuthenticatedAuditorCreateService implements AbstractCreateService<
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "firm", "responsabilityStatement");
+		request.unbind(entity, model, "firm", "responsabilityStatement", "accepted");
 	}
 
 	@Override
@@ -86,10 +86,10 @@ public class AuthenticatedAuditorCreateService implements AbstractCreateService<
 		principal = request.getPrincipal();
 		userAccountId = principal.getAccountId();
 		userAccount = this.repository.findOneUserAccountById(userAccountId);
-
+		Boolean a = false;
 		result = new Auditor();
 		result.setUserAccount(userAccount);
-
+		result.setAccepted(a);
 		return result;
 	}
 

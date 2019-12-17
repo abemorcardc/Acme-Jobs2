@@ -19,6 +19,8 @@
 	<acme:message code="authenticated.auditor.form.label.alert"/>
 	<acme:form-textbox code="authenticated.auditor.form.label.firm" path="firm"/>
 	<acme:form-textbox code="authenticated.auditor.form.label.statement" path="responsabilityStatement"/>
+	<acme:form-textbox readonly="true" code="authenticated.auditor.form.label.accepted" path="accepted"/>
+	
 	
 	<acme:form-submit test="${command == 'create'}" code="authenticated.auditor.form.button.create" action="/authenticated/auditor/create"/>
 	<acme:form-submit test="${command == 'update'}" code="authenticated.auditor.form.button.update" action="/authenticated/auditor/update"/>
