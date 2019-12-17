@@ -44,7 +44,7 @@ public class EmployerApplicationListByStatusService implements AbstractListServi
 
 		Collection<Application> result;
 
-		result = this.repository.findManyByJobIdOrderByStatus(request.getModel().getInteger("id"));
+		result = this.repository.findManyByJobIdOrderByStatus(request.getModel().getInteger("idj"));
 
 		return result;
 	}

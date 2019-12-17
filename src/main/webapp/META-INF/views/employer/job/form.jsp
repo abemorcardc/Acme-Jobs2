@@ -60,13 +60,13 @@
 		action="/employer/job/delete" />
 		
 	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.list.application.byReference" method ="get" 
-		action="/employer/application/list_by_reference?id=${id}" />
+		action="/employer/application/list_by_reference?idj=${id}" />
 		
 	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.list.application.byStatus" method ="get"
-		action="/employer/application/list_by_status?id=${id}" />
+		action="/employer/application/list_by_status?idj=${id}" />
 		
 	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.list.application.byCreation" method ="get"
-		action="/employer/application/list_by_creation?id=${id}" />
+		action="/employer/application/list_by_creation?idj=${id}" />
 		
 	</security:authorize>
 	

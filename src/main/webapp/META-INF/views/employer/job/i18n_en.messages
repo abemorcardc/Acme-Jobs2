@@ -18,7 +18,7 @@ employer.job.form.label.deadline = Deadline:
 employer.job.form.label.salary = Salary:
 employer.job.form.label.moreInfo = More Info:
 employer.job.form.label.descriptor = Descriptor:
-employer.job.form.label.finalMode = Final mode:
+employer.job.form.label.finalMode = Final mode
 
 employer.job.label.accept = Accept 
 employer.job.form.button.create = Create
