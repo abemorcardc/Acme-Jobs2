@@ -48,7 +48,9 @@ public class AuditorAuditRecordShowService implements AbstractShowService<Audito
 		assert entity != null;
 		assert model != null;
 
-		String jobReference = this.repository.findJobReference(request.getModel().getInteger("id"));
+		int auditRecordId = request.getModel().getInteger("id");
+		int jobId = this.repository.findOneById(auditRecordId).getJob().getId();
+		String jobReference = this.repository.findJobReference(jobId);
 		model.setAttribute("jobReference", jobReference);
 
 		request.unbind(entity, model, "title", "creationMoment");

@@ -202,9 +202,9 @@
     create table `message` (
        `id` integer not null,
         `version` integer not null,
-        `body` varchar(255),
+        `body` varchar(1000),
         `creation_moment` datetime(6),
-        `tags` varchar(255),
+        `tags` varchar(1000),
         `title` varchar(255),
         `author_id` integer,
         `message_thread_id` integer not null,
