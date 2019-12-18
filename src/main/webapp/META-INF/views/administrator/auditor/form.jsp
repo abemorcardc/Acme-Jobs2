@@ -6,7 +6,7 @@
 <acme:form>
 	<acme:form-textbox readonly="true" code="administrator.auditor.form.label.firm" path="firm"/>
 	<acme:form-textarea readonly="true" code="administrator.auditor.form.label.responsabilityStatement" path="responsabilityStatement"/>
-	<acme:form-textbox code="administrator.auditor.form.label.accepted" path="accepted"/>
+	<acme:form-checkbox  code="administrator.auditor.form.label.accepted" path="accepted"/>
 
 	<acme:form-return code="administrator.auditor.form.button.return"/>
 	

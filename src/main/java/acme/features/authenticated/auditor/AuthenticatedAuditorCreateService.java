@@ -86,10 +86,10 @@ public class AuthenticatedAuditorCreateService implements AbstractCreateService<
 		principal = request.getPrincipal();
 		userAccountId = principal.getAccountId();
 		userAccount = this.repository.findOneUserAccountById(userAccountId);
-		String a = "false";
+		//String a = "false";
 		result = new Auditor();
 		result.setUserAccount(userAccount);
-		result.setAccepted(a);
+		result.setAccepted(false);
 		return result;
 	}
 
