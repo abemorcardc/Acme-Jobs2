@@ -19,8 +19,6 @@ public class AuthenticatedMessageThreadShowService implements AbstractShowServic
 	AuthenticatedMessageThreadRepository repository;
 
 
-	// AbstractListService<Auditor, AuditorRecord> interface ------------
-
 	@Override
 	public boolean authorise(final Request<MessageThread> request) {
 		assert request != null;
@@ -34,11 +32,9 @@ public class AuthenticatedMessageThreadShowService implements AbstractShowServic
 		assert entity != null;
 		assert model != null;
 
-		Authenticated creator = this.repository.findCreatorNameByThreadID(entity.getId());
-		String creatorName = creator.getUserAccount().getUsername();
+		int messageThreadId = request.getModel().getInteger("id");
+		String creatorName = this.repository.findCreatorByThreadID(messageThreadId).getUserAccount().getUsername();
 		model.setAttribute("creatorName", creatorName);
-		Boolean isCreator = request.getPrincipal().getUsername().equals(creatorName);
-		model.setAttribute("isCreator", isCreator);
 		request.unbind(entity, model, "title", "creationMoment");
 
 	}

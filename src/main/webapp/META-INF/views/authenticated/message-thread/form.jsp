@@ -13,6 +13,8 @@
 	<acme:form-submit test="${command != 'create' && isCreator == true}" code="authenticated.message-thread.form.button.users.add" method ="get" action="/authenticated/authenticated-message-thread/create?idt=${id}"/>
 	<acme:form-submit test="${command != 'create' }" code="authenticated.message-thread.form.button.messages" method ="get" action="/authenticated/message/list?id=${id}"/>
 	
+	<acme:form-submit test="${command != 'create'}" code="authenticated.message.form.button.message.create" method ="get" action="/authenticated/message/create?idt=${id}"/>
+	
 	<acme:form-submit test="${command == 'create' }" code="authenticated.message-thread.form.button.create" action="/authenticated/message-thread/create" />
 	
 	

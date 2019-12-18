@@ -17,8 +17,13 @@ authenticated.message.form.label.title = Title:
 authenticated.message.form.label.creationMoment = Creation Moment:
 authenticated.message.form.label.tags = Tags:
 authenticated.message.form.label.body = Body:
-authenticated.message.form.label.nombreAuthor = Author: 
-
+authenticated.message.form.label.creatorName = Author: 
+authenticated.message.form.label.accept = I am sure that i want to create this message
 
 authenticated.message.button.return = Return
+authenticated.message.form.button.message.create = Create message
+
+authenticated.message.error.must-accept = You must accept
+authenticated.message.error.body.spam = The message's body contains too much spam
+
 
