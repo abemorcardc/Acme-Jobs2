@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.jobs.Job;
 import acme.entities.roles.Auditor;
+import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Principal;
@@ -52,6 +53,13 @@ public class AuditorJobListAuditRecordService implements AbstractListService<Aud
 		principal = request.getPrincipal();
 		result = this.repository.findManyWithAuditorRecord(principal.getActiveRoleId());
 
+		Employer employer;
+		for (Job j : result) {
+			employer = j.getEmployer();
+			if (!(j.isFinalMode() || !j.isFinalMode() && employer.getUserAccount().getId() == principal.getActiveRoleId())) {
+				result.remove(j);
+			}
+		}
 		return result;
 	}
 

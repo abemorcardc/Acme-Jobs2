@@ -46,7 +46,9 @@ public class WorkerApplicationShowService implements AbstractShowService<Worker,
 		assert entity != null;
 		assert model != null;
 
-		String jobReference = this.repository.findJobReference(request.getModel().getInteger("id"));
+		int applicationId = request.getModel().getInteger("id");
+		int jobId = this.repository.findOneById(applicationId).getJob().getId();
+		String jobReference = this.repository.findJobReference(jobId);
 		model.setAttribute("jobReference", jobReference);
 
 		request.unbind(entity, model, "reference", "deadline", "status", "statement");

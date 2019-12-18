@@ -114,7 +114,7 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 		String[] palabrasDescriptor = body.split(" ");
 		Double contadorSpam = 0.0;
 		for (String s : palabrasDescriptor) {
-			if (spamWords.contains(s.trim())) {
+			if (spamWords.contains(s.trim().toLowerCase())) {
 				contadorSpam = contadorSpam + 1;
 			}
 		}

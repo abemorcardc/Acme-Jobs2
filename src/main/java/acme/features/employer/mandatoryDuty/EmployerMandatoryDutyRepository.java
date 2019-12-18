@@ -25,7 +25,7 @@ public interface EmployerMandatoryDutyRepository extends AbstractRepository {
 	@Query("select j from Job j where j.id = ?1")
 	Job findJobById(int id);
 
-	@Query("select md.job.reference from MandatoryDuty md where md.id =?1")
-	String findJobReference(int mandatoryId);
+	@Query("select j.reference from Job j where j.id =?1")
+	String findJobReference(int jobId);
 
 }

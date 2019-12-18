@@ -29,7 +29,7 @@ public interface AuditorAuditRecordRepository extends AbstractRepository {
 	@Query("select j from Job j where j.id =?1")
 	Job findJobById(int jobId);
 
-	@Query("select ar.job.reference from AuditRecord ar where ar.id =?1")
-	String findJobReference(int arId);
+	@Query("select j.reference from Job j where j.id =?1")
+	String findJobReference(int jobId);
 
 }

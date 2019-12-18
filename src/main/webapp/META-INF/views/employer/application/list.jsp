@@ -17,7 +17,7 @@
 
 <acme:list>
  <acme:list-column code="employer.application.list.label.reference" path="reference" width="30%"/>
-  <acme:list-column code="employer.application.list.label.creationMoment" path="deadline" width="15%"/>
+  <acme:list-column code="employer.application.list.label.creationMoment" path="creationMoment" width="15%"/>
  <acme:list-column code="employer.application.list.label.deadline" path="deadline" width="15%"/>
  <acme:list-column code="employer.application.list.label.status" path="status" width="30%"/>
 </acme:list>
