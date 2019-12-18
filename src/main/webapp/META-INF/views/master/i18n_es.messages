@@ -88,6 +88,9 @@ master.menu.challenge.list = Mostrar retos
 
 master.menu.job.listActive = Mostrar trabajos activos
 master.menu.job.listAll = Mostrat todos los trabajos
+
+master.menu.messageThread.listMine = Mis hilos de mensajes
+master.menu.messageThread.create = Crear hilo de mensajes
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador

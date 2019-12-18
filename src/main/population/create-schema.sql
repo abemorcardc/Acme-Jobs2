@@ -68,6 +68,14 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `authenticated_message_thread` (
+       `id` integer not null,
+        `version` integer not null,
+        `authenticated_id` integer not null,
+        `message_thread_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `caballero_bulletin` (
        `id` integer not null,
         `version` integer not null,
@@ -188,6 +196,27 @@
         `percentage` integer,
         `title` varchar(255),
         `job_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `message` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `creation_moment` datetime(6),
+        `tags` varchar(255),
+        `title` varchar(255),
+        `author_id` integer,
+        `message_thread_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `message_thread` (
+       `id` integer not null,
+        `version` integer not null,
+        `creation_moment` datetime(6),
+        `title` varchar(255),
+        `creator_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -337,6 +366,16 @@ create index IDXn3v48hbbpyaqbons3pqgno06y on `request_` (`date_limit`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `authenticated_message_thread` 
+       add constraint `FKt8r6monb8mr4j7lt956c4mn9n` 
+       foreign key (`authenticated_id`) 
+       references `authenticated` (`id`);
+
+    alter table `authenticated_message_thread` 
+       add constraint `FKhwg236pcsp6wtya372osd10qy` 
+       foreign key (`message_thread_id`) 
+       references `message_thread` (`id`);
+
     alter table `configuration_spam_words` 
        add constraint `FK5lk29cpqe3960a943x8x8j4yh` 
        foreign key (`configuration_id`) 
@@ -361,6 +400,21 @@ create index IDXn3v48hbbpyaqbons3pqgno06y on `request_` (`date_limit`);
        add constraint `FK1hlimp4r545wpojqep3x63adv` 
        foreign key (`job_id`) 
        references `job` (`id`);
+
+    alter table `message` 
+       add constraint `FKe1edpykjs39o98sfkjafa0dtn` 
+       foreign key (`author_id`) 
+       references `authenticated` (`id`);
+
+    alter table `message` 
+       add constraint `FKn5adlx3oqjna7aupm8gwg3fuj` 
+       foreign key (`message_thread_id`) 
+       references `message_thread` (`id`);
+
+    alter table `message_thread` 
+       add constraint `FK3fa4h4tfet2kocvatib2ovhsa` 
+       foreign key (`creator_id`) 
+       references `authenticated` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
