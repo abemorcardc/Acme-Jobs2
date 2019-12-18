@@ -17,7 +17,7 @@ public interface AuthenticatedMessageThreadRepository extends AbstractRepository
 	MessageThread findOneById(int messageThreadId);
 
 	@Query("select mt.creator from MessageThread mt where mt.id = ?1")
-	Authenticated findCreatorNameByThreadID(int messageThreadId);
+	Authenticated findCreatorByThreadID(int messageThreadId);
 
 	@Query("select a from Authenticated a where a.id=?1")
 	Authenticated findCreatorById(int creatorId);

@@ -46,22 +46,7 @@ public class AuthenticatedMessageThreadListMineService implements AbstractListSe
 		List<MessageThread> result = new ArrayList<MessageThread>();
 
 		result = this.repository.findManyByAuthenticated(request.getPrincipal().getActiveRoleId());
-		/*
-		 * int authenticatedId = request.getPrincipal().getActiveRoleId();
-		 * List<MessageThread> allMessageThreads = this.repository.findMany();
-		 *
-		 * List<MessageThread> messageThreadsUser = new ArrayList<MessageThread>();
-		 *
-		 * for (MessageThread mt : allMessageThreads) {
-		 * List<Integer> usersIds = new ArrayList<Integer>();
-		 * for (Authenticated a : mt.getUsers()) {
-		 * usersIds.add(a.getId());
-		 * }
-		 * if (usersIds.contains(authenticatedId)) {
-		 * messageThreadsUser.add(mt);
-		 */
 
-		//result.addAll(messageThreadsUser);
 		return result;
 
 	}

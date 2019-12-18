@@ -16,8 +16,11 @@ authenticated.message.form.label.title = Título:
 authenticated.message.form.label.creationMoment = Momento de creación:
 authenticated.message.form.label.tags = Etiquetas:
 authenticated.message.form.label.body = Cuerpo:
-authenticated.message.form.label.nombreAuthor = Autor: 
+authenticated.message.form.label.creatorName = Autor: 
+authenticated.message.form.label.accept = Estoy seguro de que quiero crear este mensaje
 
-
+authenticated.message.form.button.message.create = Crear mensaje
 authenticated.message.button.return = Volver
 
+authenticated.message.error.must-accept = Debes Aceptar
+authenticated.message.error.body.spam = El cuerpo del mensaje contiene demasiado spam

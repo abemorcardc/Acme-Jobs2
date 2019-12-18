@@ -3,6 +3,7 @@ package acme.entities.messages;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -31,12 +32,11 @@ public class Message extends DomainEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				creationMoment;
 
-	//@ElementCollection(targetClass = String.class)
-	//private Collection<String>	tags;
-
+	@Column(length = 1000)
 	private String				tags;
 
 	@NotBlank
+	@Column(length = 1000)
 	private String				body;
 
 	@NotNull

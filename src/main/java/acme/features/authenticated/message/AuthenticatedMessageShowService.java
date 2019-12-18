@@ -34,8 +34,8 @@ public class AuthenticatedMessageShowService implements AbstractShowService<Auth
 		assert entity != null;
 		assert model != null;
 
-		String nombreAutor = entity.getAuthor().getUserAccount().getUsername();
-		model.setAttribute("nombreAuthor", nombreAutor);
+		String creatorName = entity.getAuthor().getUserAccount().getUsername();
+		model.setAttribute("creatorName", creatorName);
 
 		request.unbind(entity, model, "title", "creationMoment");
 		request.unbind(entity, model, "body", "tags");
@@ -50,7 +50,7 @@ public class AuthenticatedMessageShowService implements AbstractShowService<Auth
 		int id;
 
 		id = request.getModel().getInteger("id");
-		result = this.repository.findOneById(id);
+		result = this.repository.findOneMessageById(id);
 
 		return result;
 
