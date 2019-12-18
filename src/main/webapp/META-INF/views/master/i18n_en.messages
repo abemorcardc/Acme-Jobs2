@@ -88,6 +88,7 @@ master.menu.job.listActive = List active jobs
 master.menu.job.listAll = List all jobs
 
 master.menu.messageThread.listMine = My Message Threads
+master.menu.messageThread.create = Create a Message Thread
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator

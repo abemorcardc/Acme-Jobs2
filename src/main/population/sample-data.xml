@@ -681,17 +681,17 @@
 	
 	<!-- Authenticated_MessageThread -->
 	
-	<bean name="Authenticated_MessageThread1" class="acme.entities.authenticated_MessageThreads.Authenticated_MessageThread">
+	<bean name="AuthenticatedMessageThread1" class="acme.entities.authenticatedMessageThreads.AuthenticatedMessageThread">
 		<property name="authenticated" ref="employer1Authenticated"/>
 	    <property name="messageThread" ref="MessageThread1"/>
 	</bean>
 	
-	<bean name="Authenticated_MessageThread2" class="acme.entities.authenticated_MessageThreads.Authenticated_MessageThread">
+	<bean name="AuthenticatedMessageThread2" class="acme.entities.authenticatedMessageThreads.AuthenticatedMessageThread">
 		<property name="authenticated" ref="worker1Authenticated"/>
 	    <property name="messageThread" ref="MessageThread1"/>
 	</bean>
 	
-	<bean name="Authenticated_MessageThread3" class="acme.entities.authenticated_MessageThreads.Authenticated_MessageThread">
+	<bean name="AuthenticatedMessageThread3" class="acme.entities.authenticatedMessageThreads.AuthenticatedMessageThread">
 		<property name="authenticated" ref="auditor1Authenticated"/>
 	    <property name="messageThread" ref="MessageThread2"/>
 	</bean>

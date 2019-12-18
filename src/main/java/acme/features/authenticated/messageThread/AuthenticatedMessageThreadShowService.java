@@ -37,6 +37,8 @@ public class AuthenticatedMessageThreadShowService implements AbstractShowServic
 		Authenticated creator = this.repository.findCreatorNameByThreadID(entity.getId());
 		String creatorName = creator.getUserAccount().getUsername();
 		model.setAttribute("creatorName", creatorName);
+		Boolean isCreator = request.getPrincipal().getUsername().equals(creatorName);
+		model.setAttribute("isCreator", isCreator);
 		request.unbind(entity, model, "title", "creationMoment");
 
 	}

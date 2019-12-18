@@ -18,8 +18,9 @@ authenticated.message-thread.form.label.creator = Creator:
 
 
 authenticated.message-thread.form.button.users = Users
+authenticated.message-thread.form.button.users.add = Add user
 authenticated.message-thread.form.button.messages = Messages
 
-
+authenticated.message-thread.form.button.create = Create
 authenticated.message-thread.form.button.return = Return
 

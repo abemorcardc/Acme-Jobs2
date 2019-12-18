@@ -5,12 +5,15 @@
 
 <acme:form>
 	<acme:form-textbox code="authenticated.message-thread.form.label.title" path="title"/>
-	<acme:form-moment code="authenticated.message-thread.form.label.creationMoment" path="creationMoment"/>
-	<acme:form-textbox code="authenticated.message-thread.form.label.creator" path="creatorName"/>
+	<acme:form-moment readonly="true" code="authenticated.message-thread.form.label.creationMoment" path="creationMoment"/>
+	<acme:form-textbox readonly="true" code="authenticated.message-thread.form.label.creator" path="creatorName"/>
 	
 	<acme:form-return code="authenticated.message-thread.form.button.return"/>
-	<acme:form-submit code="authenticated.message-thread.form.button.users" method ="get" action="/authenticated/authenticated/list?id=${id}"/>
-	<acme:form-submit code="authenticated.message-thread.form.button.messages" method ="get" action="/authenticated/message/list?id=${id}"/>
+	<acme:form-submit test="${command != 'create' }" code="authenticated.message-thread.form.button.users" method ="get" action="/authenticated/authenticated-message-thread/list_by_message_thread?idt=${id}"/>
+	<acme:form-submit test="${command != 'create' && isCreator == true}" code="authenticated.message-thread.form.button.users.add" method ="get" action="/authenticated/authenticated-message-thread/create?idt=${id}"/>
+	<acme:form-submit test="${command != 'create' }" code="authenticated.message-thread.form.button.messages" method ="get" action="/authenticated/message/list?id=${id}"/>
+	
+	<acme:form-submit test="${command == 'create' }" code="authenticated.message-thread.form.button.create" action="/authenticated/message-thread/create" />
 	
 	
 	</acme:form> 
