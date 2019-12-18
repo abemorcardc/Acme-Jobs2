@@ -16,8 +16,8 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
- <acme:list-column code="authenticated.authenticated.list.label.username" path="username" width="20%"/>
+ <acme:list-column code="authenticated.authenticated-message-thread.list.label.authenticated" path="username" width="20%"/>
  
 </acme:list>
-<acme:form-return code="authenticated.authenticated.button.return"/>
+<acme:form-return code="authenticated.authenticated-message-thread.button.return"/>
 

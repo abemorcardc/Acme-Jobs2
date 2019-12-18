@@ -1,5 +1,5 @@
 
-package acme.entities.authenticated_MessageThreads;
+package acme.entities.authenticatedMessageThreads;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -13,7 +13,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Authenticated_MessageThread extends DomainEntity {
+public class AuthenticatedMessageThread extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
