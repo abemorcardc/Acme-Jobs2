@@ -55,6 +55,11 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 		result.setStatus("pending");
 		//result.set
 
+		Date moment;
+
+		moment = new Date(System.currentTimeMillis() - 1);
+		result.setCreationMoment(moment);
+
 		return result;
 	}
 
@@ -102,16 +107,15 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 
 	@Override
 	public void create(final Request<Application> request, final Application entity) {
-		assert request != null;
-		assert entity != null;
+		//		assert request != null;
+		//		assert entity != null;
 
-		Date moment;
-
-		moment = new Date(System.currentTimeMillis() - 1);
-		entity.setCreationMoment(moment);
-
+		//		Date moment;
+		//
+		//		moment = new Date(System.currentTimeMillis() - 1);
+		//		entity.setCreationMoment(moment);
+		//		this.repository.save(entity);
 		this.repository.save(entity);
-
 	}
 
 }
