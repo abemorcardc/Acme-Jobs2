@@ -58,10 +58,10 @@ public class AdministratorAuditorUpdateService implements AbstractUpdateService<
 		assert entity != null;
 		assert errors != null;
 
-		String accepted = request.getModel().getString("accepted");
-
-		Boolean r1 = accepted.equals("true") || accepted.equals("false");
-		errors.state(request, r1, "accepted", "administrator.auditor.error.accepted");
+		//		Boolean accepted = request.getModel().getBoolean("accepted");
+		//
+		//		Boolean r1 = accepted == true || accepted == false;
+		//		errors.state(request, r1, "accepted", "administrator.auditor.error.accepted");
 
 	}
 
@@ -69,6 +69,10 @@ public class AdministratorAuditorUpdateService implements AbstractUpdateService<
 	public void update(final Request<Auditor> request, final Auditor entity) {
 		assert request != null;
 		assert entity != null;
+
+		if (request.getModel().getBoolean("accepted") == true) {
+			entity.setAccepted(true);
+		}
 
 		this.repository.save(entity);
 	}

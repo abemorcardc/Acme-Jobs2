@@ -19,13 +19,13 @@
 	</jstl:if>
 	
 
-	<acme:form-textbox code="employer.job.form.label.reference" path="reference"/>
+	<acme:form-textbox placeholder="EMP1-JOB1" code="employer.job.form.label.reference" path="reference"/>
 	<acme:form-textbox code="employer.job.form.label.title" path="title"/>
 	<acme:form-moment code="employer.job.form.label.deadline" path="deadline"/>
 	<acme:form-money code="employer.job.form.label.salary" path="salary"/>
 	<acme:form-url code="employer.job.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textarea code="employer.job.form.label.descriptor" path="descriptor"/>
-	<acme:form-textbox code="employer.job.form.label.finalMode" path="finalMode"/>
+	<acme:form-checkbox code="employer.job.form.label.finalMode" path="finalMode"/>
 	
 	
 	<acme:form-return code="employer.job.form.button.return"/>
@@ -38,8 +38,8 @@
 	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.createAuditRecord" method ="get" action="/auditor/audit-record/create?idj=${id}"/>
 	</security:authorize>
 
-	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.listAuditRecord" method ="get" action="/authenticated/audit-record/list?id=${id}"/>
-	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.mandatoryDuty" method ="get" action="/authenticated/mandatory-duty/list?id=${id}"/>
+	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.listAuditRecord" method ="get" action="/authenticated/audit-record/list?idj=${id}"/>
+	<acme:form-submit test="${command != 'create'}" code="employer.job.form.button.mandatoryDuty" method ="get" action="/authenticated/mandatory-duty/list?idj=${id}"/>
 	
 	<security:authorize access="hasRole('Employer')">
 	<acme:form-submit test="${command != 'create' && finalMode == false}" code="employer.mandatoryDuty.form.button.create" method = "get" action="/employer/mandatory-duty/create?idj=${id}" />
@@ -60,13 +60,13 @@
 		action="/employer/job/delete" />
 		
 	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.list.application.byReference" method ="get" 
-		action="/employer/application/list_by_reference?id=${id}" />
+		action="/employer/application/list_by_reference?idj=${id}" />
 		
 	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.list.application.byStatus" method ="get"
-		action="/employer/application/list_by_status?id=${id}" />
+		action="/employer/application/list_by_status?idj=${id}" />
 		
 	<acme:form-submit test="${command == 'show' }" code="employer.job.form.button.list.application.byCreation" method ="get"
-		action="/employer/application/list_by_creation?id=${id}" />
+		action="/employer/application/list_by_creation?idj=${id}" />
 		
 	</security:authorize>
 	

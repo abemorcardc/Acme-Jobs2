@@ -48,6 +48,8 @@ public class AdministratorCompanyRecordCreateService implements AbstractCreateSe
 	public CompanyRecord instantiate(final Request<CompanyRecord> request) {
 		CompanyRecord result;
 		result = new CompanyRecord();
+		result.setIncorporated(false);
+
 		return result;
 	}
 
@@ -57,15 +59,24 @@ public class AdministratorCompanyRecordCreateService implements AbstractCreateSe
 		assert entity != null;
 		assert errors != null;
 
+		//		Boolean inc = request.getModel().getBoolean("incorporated");
+		//		Boolean r = inc == false;
+		//
+		//		errors.state(request, r, "incorporated", "administrator.company-record.error.incorporated");
 	}
 
 	@Override
 	public void create(final Request<CompanyRecord> request, final CompanyRecord entity) {
 		String name = entity.getName();
-		if (entity.getIncorporated()) {
+		if (request.getModel().getBoolean("incorporated") == true) {
+
+			//if (entity.getIncorporated()) {
 			name = name + " inc";
+			//}
+			entity.setName(name);
+
 		}
-		entity.setName(name);
+
 		this.repository.save(entity);
 
 	}

@@ -46,7 +46,9 @@ public class EmployerMandatoryDutyCreateService implements AbstractCreateService
 		assert model != null;
 
 		int jobId = request.getModel().getInteger("idj");
+		String jobReference = this.repository.findJobReference(jobId);
 		model.setAttribute("idj", jobId);
+		model.setAttribute("jobReference", jobReference);
 
 		request.unbind(entity, model, "title", "dutyDescription", "percentage");
 	}

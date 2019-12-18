@@ -45,6 +45,9 @@ public class EmployerMandatoryDutyUpdateService implements AbstractUpdateService
 		assert entity != null;
 		assert model != null;
 
+		String jobReference = this.repository.findJobReference(request.getModel().getInteger("id"));
+		model.setAttribute("jobReference", jobReference);
+
 		request.unbind(entity, model, "title", "dutyDescription", "percentage");
 	}
 

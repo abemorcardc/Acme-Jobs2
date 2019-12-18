@@ -45,7 +45,7 @@ public class AuthenticatedAuditRecordListService implements AbstractListService<
 		Collection<AuditRecord> result;
 		int jobId;
 
-		jobId = request.getModel().getInteger("id");
+		jobId = request.getModel().getInteger("idj");
 		result = this.repository.findManyByJobId(jobId);
 
 		return result;

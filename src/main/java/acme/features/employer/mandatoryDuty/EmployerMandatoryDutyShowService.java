@@ -34,6 +34,8 @@ public class EmployerMandatoryDutyShowService implements AbstractShowService<Emp
 		assert entity != null;
 		assert model != null;
 
+		String jobReference = this.repository.findJobReference(request.getModel().getInteger("id"));
+		model.setAttribute("jobReference", jobReference);
 		request.unbind(entity, model, "title", "dutyDescription", "percentage");
 
 	}

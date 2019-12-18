@@ -19,11 +19,12 @@ administrator.company-record.form.label.activities = Activities:
 administrator.company-record.form.label.webSite = Web Site:
 administrator.company-record.form.label.phone = Phone:
 administrator.company-record.form.label.email = Email:
-administrator.company-record.form.label.incorporated = Incorporated:
+administrator.company-record.form.label.incorporated = Incorporated
 administrator.company-record.form.label.stars = Stars:
 
 administrator.company-record.form.button.update = Update
 administrator.company-record.form.button.delete = Delete
 administrator.company-record.form.button.create = Create
 administrator.company-record.form.button.return = Return
+
 

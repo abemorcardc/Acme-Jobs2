@@ -44,7 +44,7 @@ public class EmployerApplicationListByReferenceService implements AbstractListSe
 
 		Collection<Application> result;
 
-		result = this.repository.findManyByJobIdOrderByReference(request.getModel().getInteger("id"));
+		result = this.repository.findManyByJobIdOrderByReference(request.getModel().getInteger("idj"));
 
 		return result;
 	}

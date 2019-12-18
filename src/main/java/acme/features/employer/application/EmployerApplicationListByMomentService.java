@@ -44,7 +44,7 @@ public class EmployerApplicationListByMomentService implements AbstractListServi
 
 		Collection<Application> result;
 
-		result = this.repository.findManyByJobIdOrderByMoment(request.getModel().getInteger("id"));
+		result = this.repository.findManyByJobIdOrderByMoment(request.getModel().getInteger("idj"));
 
 		return result;
 	}

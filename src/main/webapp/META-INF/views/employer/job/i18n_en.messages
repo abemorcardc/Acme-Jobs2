@@ -18,7 +18,7 @@ employer.job.form.label.deadline = Deadline:
 employer.job.form.label.salary = Salary:
 employer.job.form.label.moreInfo = More Info:
 employer.job.form.label.descriptor = Descriptor:
-employer.job.form.label.finalMode = Final mode:
+employer.job.form.label.finalMode = Final mode
 
 employer.job.label.accept = Accept 
 employer.job.form.button.create = Create
@@ -46,7 +46,8 @@ employer.job.error.applications = There must not be applications by workers link
 
 employer.job.error.finalMode = Jobs in final mode can not be updated
 employer.job.error.finalMode.workload = Job's mandatory duties' percentage of weekly workload must sum up to 100% to save the job as final mode
-employer.job.error.finalMode.spam = Descriptor must not be spam
+employer.job.error.finalMode.spam = Descriptor must not be spam.
+employer.job.error.finalMode.create = You cannot set it into final mode until you have mandatory duties.
 
 employer.job.error.deadline-future = Deadline should be at least 1 day in the future from this moment 
 

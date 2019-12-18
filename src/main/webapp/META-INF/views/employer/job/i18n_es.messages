@@ -18,7 +18,7 @@ employer.job.form.label.deadline = Fecha Límite:
 employer.job.form.label.salary = Salario:
 employer.job.form.label.moreInfo = Más información:
 employer.job.form.label.descriptor = Descripción:
-employer.job.form.label.finalMode = Modo final:
+employer.job.form.label.finalMode = Modo final
 
 employer.job.form.button.create = Crear
 
@@ -48,6 +48,7 @@ employer.job.error.applications = No deben de haber aplicaciones de trabajadores
 employer.job.error.finalMode = Los trabajos que estén en modo final no se pueden modificar
 employer.job.error.finalMode.workload = Para pasar a modo final sus deberes obligatorios deben sumar una carga de trabajo del 100
 employer.job.error.finalMode.spam = El descriptor no puede ser spam
+employer.job.error.finalMode.create = No puedes ponerlo en modo final hasta que no tenga deberes obligatorios
 
 employer.job.error.deadline-future = La fecha límite debe de ser en un día al menos desde este momento
 

@@ -29,7 +29,10 @@ public class AuditorAuditRecordCreateService implements AbstractCreateService<Au
 	public boolean authorise(final Request<AuditRecord> request) {
 		assert request != null;
 
-		return request.getPrincipal().getActiveRole().equals(Auditor.class);
+		int userId = request.getPrincipal().getActiveRoleId();
+		String accepted = this.repository.findAccepted(userId);
+
+		return request.getPrincipal().getActiveRole().equals(Auditor.class) && accepted.equals("true");
 	}
 
 	@Override
@@ -48,7 +51,9 @@ public class AuditorAuditRecordCreateService implements AbstractCreateService<Au
 		assert model != null;
 
 		int jobId = request.getModel().getInteger("idj");
+		String jobReference = this.repository.findJobReference(jobId);
 		model.setAttribute("idj", jobId);
+		model.setAttribute("jobReference", jobReference);
 
 		request.unbind(entity, model, "title", "body", "published");
 	}
